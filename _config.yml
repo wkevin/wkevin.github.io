@@ -24,8 +24,8 @@ github_username:  wkevin
 
 # Build settings
 markdown: kramdown
-#theme: minima
-theme: jekyll-theme-cayman
+theme: minima
+#theme: jekyll-theme-cayman
 #remote_theme: "mmistakes/so-simple-theme"
 plugins:
   - jekyll-feed
