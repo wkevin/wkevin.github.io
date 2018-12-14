@@ -25,7 +25,7 @@ github_username:  wkevin
 # Build settings
 markdown: kramdown
 #theme: minima
-remote_theme: "mmistakes/minimal-mistakes@4.14.1"
+theme: mmistakes/so-simple-theme"
 plugins:
   - jekyll-feed
   - jekyll-include-cache
