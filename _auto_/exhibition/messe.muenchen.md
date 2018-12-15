@@ -6,6 +6,8 @@ image:
   caption: "Photo from [messe-muenchen](https://messe-muenchen.de)"
 ---
 
+2017.4.8
+
 Messe Muenchen 简称 MM，LOGO：
 
 ![](/images/auto/exhibition/Logo_Messe_Munchen.png)

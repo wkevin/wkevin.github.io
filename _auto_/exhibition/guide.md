@@ -7,7 +7,7 @@ image:
 ---
 
 
-<p align="right" style="font-size:16px">2017.4.13更新 by Kevin @ 菌不器</p>
+<p align="right" style="font-size:16px">2017.4.13更新 by Kevin</p>
 
 
 |主办|展会|日期|城市|展馆|展览面积|参展商|观众|推荐|

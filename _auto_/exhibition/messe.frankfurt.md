@@ -6,6 +6,8 @@ image:
   caption: "Photo from [messefrankfurt](https://www.messefrankfurt.com/frankfurt/en/company.html)"
 ---
 
+2017.4.6
+
 德国有两个法兰克福（Frankfurt），东西部各一个：
 
 * 奥得河畔法兰克福（德语:Frankfurt an der Oder）：是个东部的小城

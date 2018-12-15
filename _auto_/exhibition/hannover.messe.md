@@ -6,6 +6,8 @@ image:
   caption: "Photo from [Pexels](https://www.pexels.com)"
 ---
 
+2017.4.3
+
 工业和自动化的展会的故事，必须要从德国说起。
 
 德国两个以展览被人熟知的城市是 汉诺威（Hannover） 和 法兰克福（Frankfurt），尤其是我关心的工业、电子、自动化相关的展览，两个都有涉及。
