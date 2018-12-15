@@ -11,15 +11,25 @@
     - [jekyll official](https://jekyllrb.com/docs/configuration/)
     - 修改后需要重启 jekyll serve
 - `Gemfile`
-    - Github Pages 有默认的 Gemfile，用户可以不上传：`git rm Gemfile`
-    - 上传自己的Gemfile给Github Pages使用的话，需要修改:
+    - Github Pages 有默认的 Gemfile，用户不需要上传：`git rm Gemfile`
+    - 本地浏览如果需要模拟 Github Pages，修改:
         - 注释 `gem "jekyll"`
         - 打开 `gem "github-pages", group: :jekyll_plugins`
 - Config theme
     - `.md`文件中的很多值（如：layout：xxx）是给theme使用的，选择不同的theme需要配置xxx
     - 大部分theme如果要本地预览的话，则需要下载其`_layout`、`_css`等
-    - `theme: xxx`: [officially supported themes](https://pages.github.com/themes/)
-        - `theme: minima` —— 默认
-        - `theme: jekyll-theme-cayman`
-    - `remote_theme: xxx`: [open source Jekyll theme hosted on GitHub](https://github.com/topics/jekyll-theme)
-        - https://github.com/mmistakes/minimal-mistakes
+    - [officially supported themes](https://pages.github.com/themes/): `theme: xxx`
+        - 自动搜索 `_posts` 目录并生成Blog
+            - `theme: minima` —— `jekyll new` 时默认
+        - 自己组织链接，不支持page、post，不能用来做blog
+            - `theme: jekyll-theme-cayman`
+            - 其他的都是，所以要想写blog，还得用下面的 `remote_theme`
+    - [open source Jekyll theme hosted on GitHub](https://github.com/topics/jekyll-theme)
+        - `remote_theme: xxx` —— 需要该theme已经gem化，Github Pages能够在云端找到并安装
+            - https://github.com/mmistakes/minimal-mistakes
+            - https://github.com/mmistakes/so-simple-theme —— 本Blog使用
+                - `data/navigation.yml` 定义导航栏
+                - 根目录下的 .md 文件对应每个子目录：posts、categories、tags、ai、auto、search —— 其中 posts、ai、auto 包含md文件，其他是视图
+                - posts、ai、auto 分别对应 `_post`、`_ai`、`_auto` 文件夹
+        - fork -- modify
+            - https://github.com/daattali/beautiful-jekyll
