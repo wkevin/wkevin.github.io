@@ -5,12 +5,21 @@
     - `gem install jekyll bundle`
     - `jekyll new wkevin.github.io`
     - `cd wkevin.github.io`
-    - modify `_config.yml`
     - `bundle exec jekyll serve`
-- Adapte Github Pages
-    - `vi _config.yml`:
-        - 注释掉 `gem "jekyll"`
+- `_config.yml`
+    - `_config.yml` 是给 `jekyll serve`或`jekyll build`使用的
+    - [jekyll official](https://jekyllrb.com/docs/configuration/)
+    - 修改后需要重启 jekyll serve
+- `Gemfile`
+    - Github Pages 有默认的 Gemfile，用户可以不上传：`git rm Gemfile`
+    - 上传自己的Gemfile给Github Pages使用的话，需要修改:
+        - 注释 `gem "jekyll"`
         - 打开 `gem "github-pages", group: :jekyll_plugins`
 - Config theme
-    - https://github.com/mmistakes/minimal-mistakes
-        - Gemfile
+    - `.md`文件中的很多值（如：layout：xxx）是给theme使用的，选择不同的theme需要配置xxx
+    - 大部分theme如果要本地预览的话，则需要下载其`_layout`、`_css`等
+    - `theme: xxx`: [officially supported themes](https://pages.github.com/themes/)
+        - `theme: minima` —— 默认
+        - `theme: jekyll-theme-cayman`
+    - `remote_theme: xxx`: [open source Jekyll theme hosted on GitHub](https://github.com/topics/jekyll-theme)
+        - https://github.com/mmistakes/minimal-mistakes
