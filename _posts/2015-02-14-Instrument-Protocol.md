@@ -1,11 +1,15 @@
 ---
 title: "仪器通讯接口简史"
+date:   2015-02-14 10:16:00 +0800
+categories: 
+    - it
+tags:
+    - VISA
+    - SCPI
+    - VPP
 image: 
   path: https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=91784127,1318939839&fm=26&gp=0.jpg
-  thumbnail: https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=91784127,1318939839&fm=26&gp=0.jpg
 ---
-
-2013.2
 
 1960`，个人电脑还只在科幻书籍中的年代，当年的惠普主营业务还是电气领域。
 

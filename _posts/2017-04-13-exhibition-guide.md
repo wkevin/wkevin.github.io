@@ -1,8 +1,12 @@
 ---
 title: "工业4.0、自动化展会推荐列表"
+date:   2017-04-13 10:16:00 +0800
+categories: 
+    - auto
+tags:
+    - 展会
 image: 
   path: https://images.pexels.com/photos/841286/pexels-photo-841286.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
-  thumbnail: https://images.pexels.com/photos/841286/pexels-photo-841286.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
   caption: "Photo from [Pexels](https://www.pexels.com)"
 ---
 

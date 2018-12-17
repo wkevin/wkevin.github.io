@@ -1,12 +1,15 @@
 ---
 title: "法兰克福展系(Messe Frankfurt)"
+date:   2017-04-06 10:16:00 +0800
+categories: 
+    - auto
+tags:
+    - 法兰克福
+    - 展会
 image: 
   path: https://www.messefrankfurt.com/content/dam/messefrankfurt-redaktion/corporate/images/stages/corp-stage-company-2560x1440.jpg.transform/1280w/image.jpg
-  thumbnail: https://www.messefrankfurt.com/content/dam/messefrankfurt-redaktion/corporate/images/stages/corp-stage-company-2560x1440.jpg.transform/1280w/image.jpg
   caption: "Photo from [messefrankfurt](https://www.messefrankfurt.com/frankfurt/en/company.html)"
 ---
-
-2017.4.6
 
 德国有两个法兰克福（Frankfurt），东西部各一个：
 
@@ -15,7 +18,7 @@ image:
 
 网上有这样一副趣图，画的是德国各州的特色，黑森州画的是格林兄弟，就是写格林童话的那位。
 
-![](/images/auto/exhibition/german.jpg)
+![](/images/posts/exhibition/german.jpg)
 
 汉诺威是传统的工业基地，好似咱沈阳，法兰克福是工商业、金融和交通中心，类似咱的北京？bing地图上两者相距371km，3小时路程。两者距离出海口我在bing和baidu上量了一下，都是200+公里；法兰克福虽然不临海，但位于美茵河畔，交通也算便利吧。
 
@@ -49,7 +52,7 @@ image:
 
 3月初，SIAF 在[广交会展馆](http://www.ciefc.com/)举办，这个展馆是[中国对外贸易中心](http://www.cftc.org.cn/cn/)的，每年的[广交会](http://www.cantonfair.org.cn/cn/index.aspx)都在这里举办。中国对外贸易中心是商务部的直属单位，专门为办广交会而成立，广交会从1957年开始，每年春秋两次，今年都办到第121期了。10年前刚来深圳的时候，就听到媒体上讨论广交会和深圳的高交会还有没有举办的必要，人们可以在网络上更快的获取和交换信息了，这两个会是不是将成为难兄难弟。一晃十年过去了，他俩还依然健在，但前年去了一次高交会，确实人气不旺，主打高科技的高交会里面还有卖电热毯的。今年的春季广交会4月15号马上就开始了，小到鼠标键盘USB充电宝，大到监控器复印机自动取款机，要啥有啥，没有高科技的帽子在头上带着轻松多了，有空去溜达可以当逛商场了。高交会展馆还是确实比较大的，室内展厅总面积33.8万平方米（A区：13,；B区：12.8；C区：8），全球第5，亚洲第2：
 
-![](/images/auto/exhibition/guang.jiao.hui.hall.jpg)
+![](/images/posts/exhibition/guang.jiao.hui.hall.jpg)
 
 一共是16个展馆（Hall），大部分Hall都是2层，个别是3、4层，但2、3、4层的高度和承重都是有限的，做点小买卖还行，大型设备就歇菜了，所以靠谱好用的真实面积要比34w平米小很多，排在全球第5有点名不副实。一个广交会当然养不活这个展馆，展馆就自己张罗了一些外块，其中就包括：SIAF。
 
@@ -63,4 +66,4 @@ image:
 
 回想去年7月份第一次参加深圳自动化展会的情景，当时还是一个彻底的IT人，是个完完全全自动化的门外汉，工作的需要逼迫快速的转型，这次在SIAF中走在好多家展台都能遇到熟人了，颇有几分感慨。但来参展不是来叙旧的，是来认识新朋友的，4h里认识了：SICK,CONEC,TURCK,Balluff,Weiss……但大部分时间还是花在了视觉馆，第一次见到了海康、汇萃、微视……的产品，还发现了一家代理 NationalInstruments 的相机，可以基于LabView，瞬间拉回到我在学校是学习LabView的时光，一晃多少年过去了，NI还在发展Labview呢，我都老了。
 
-![](/images/auto/exhibition/NIVision.jpeg)
+![](/images/posts/exhibition/NIVision.jpeg)

@@ -1,8 +1,13 @@
 ---
 title: "思源黑体 and 思源宋体"
+date:   2017-05-06 10:16:00 +0800
+categories: 
+    - it
+tags:
+    - 思源
 image: 
-  path: /images/it/source.han.img/serif.7kindsbold.png
-  thumbnail: /images/it/source.han.img/serif.7kindsbold.png
+  path: /images/posts/2017-05-06-Fonts-source-han/serif.7kindsbold.png
+  thumbnail: /images/posts/2017-05-06-Fonts-source-han/serif.7kindsbold.png
 ---
 
 Google 与 Adobe 合作，为亚洲日、韩、中简、中繁四种预研创造了两种字体：思源黑体和思源宋体，覆盖15亿人群，功德无量。
@@ -11,7 +16,7 @@ Google 与 Adobe 合作，为亚洲日、韩、中简、中繁四种预研创造
 
 衬线并不是中文字体才有的，所有文字都有，无衬线是大老粗，有衬线是装逼，哈哈。
 
-![](/images/it/source.han.img/serif.and.sanserif.png)
+![](/images/posts/2017-05-06-Fonts-source-han/serif.and.sanserif.png)
 
 衬线的英文：serif；无衬线的英文：sanserif，这个san前缀是拉丁语中无的意思。所以看到字体名称中 sans--表示无衬线、serif--表示有衬线。
 
@@ -26,9 +31,9 @@ Google 与 Adobe 合作，为亚洲日、韩、中简、中繁四种预研创造
 
 思源黑和思源宋各自都有7种粗细，对应7个名称：
 
-![](/images/it/source.han.img/sanserif.7kindsbold.png)
+![](/images/posts/2017-05-06-Fonts-source-han/sanserif.7kindsbold.png)
 
-![](/images/it/source.han.img/serif.7kindsbold.png)
+![](/images/posts/2017-05-06-Fonts-source-han/serif.7kindsbold.png)
 
 两种字体在Adobe的官网上都有介绍，但没有下载：
 
@@ -48,11 +53,11 @@ Google 与 Adobe 合作，为亚洲日、韩、中简、中繁四种预研创造
 
 下载还没这么简单，有一个文件格式的问题：由于不同操作系统使用的字体文件格式不同，同一操作系统的不同版本也会使用不同的字体文件，所以需要在 Subset OFT、OTF、OTC、Super OTC 4种字体中做一个选择，选择依据：
 
-![](/images/it/source.han.img/select.filetype.png)
+![](/images/posts/2017-05-06-Fonts-source-han/select.filetype.png)
 
 不同格式下载下来的效果：
 
-![](/images/it/source.han.img/otf.otc.png)
+![](/images/posts/2017-05-06-Fonts-source-han/otf.otc.png)
 
 下载链接里有各种组合：按格式、按语言、按粗细，windows上下在OTF或SubsetOFT就是了。好吧，如果你是伸手党，就直接用下面的链接吧，但我不能保证一直有效：
 
@@ -65,7 +70,7 @@ Google 与 Adobe 合作，为亚洲日、韩、中简、中繁四种预研创造
 
 思源黑一开始使用的是Apache的License，后来修改为 OFL了，这次思源宋一出来就是 OFL。
 
-![](/images/it/source.han.img/OFLLogoRectColor.png)
+![](/images/posts/2017-05-06-Fonts-source-han/OFLLogoRectColor.png)
 
 OFL 是由SIL发起的一种开源License，全称：Open Font License ，比Apache更加开放一些，只要不拿来赚钱就可以随便使用、分发。
 

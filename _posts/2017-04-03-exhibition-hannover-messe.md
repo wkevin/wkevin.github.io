@@ -1,12 +1,15 @@
 ---
 title: "汉诺威展系(Hannover Messe)"
+date:   2017-04-03 10:16:00 +0800
+categories: 
+    - auto
+tags:
+    - 汉诺威
+    - 展会
 image: 
-  path: /images/auto/exhibition/messe.de.png
-  thumbnail: /images/auto/exhibition/messe-logo-hannovermesse.png
+  path: /images/posts/exhibition/messe.de.png
   caption: "Photo from [Pexels](https://www.pexels.com)"
 ---
-
-2017.4.3
 
 工业和自动化的展会的故事，必须要从德国说起。
 
@@ -14,7 +17,7 @@ image:
 
 找你妹游戏开始啦……请从下图中找出 Hanover、Frankfurt、Berlin。
 
-![](/images/auto/exhibition/german.map.jpg)
+![](/images/posts/exhibition/german.map.jpg)
 
 ## 汉诺威
 
@@ -28,7 +31,7 @@ image:
 
 说重点，汉诺威工业展，俗称**工博会**，Hannover Messe，这是它的LOGO：
 
-<img src="/images/auto/exhibition/messe-logo-hannovermesse.png"  style="background-color:#D50011" >
+<img src="/images/posts/exhibition/messe-logo-hannovermesse.png"  style="background-color:#D50011" >
 
 Messe：翻开我十多年前上学时候买的朗文双解，是没有messe这个词的，它是个德语词汇，表示：弥撒或博览会。为啥他俩 Hannover Messe 和 messe frankfurt 要反着来，我也不知道，大概是故意的吧。在wiki上英语使用 Fair 这个单词的，比如 [Hanover的wiki主页上](https://en.wikipedia.org/wiki/Hanover) 写到：
 
@@ -44,19 +47,19 @@ Messe：翻开我十多年前上学时候买的朗文双解，是没有messe这�
 
 网站上一趟列出了汉诺威展览公司组织的6个展会，工博会排列第3位。
 
-![](/images/auto/exhibition/messe.de.png)
+![](/images/posts/exhibition/messe.de.png)
 
 展览公司成立于1947年，拥用世界最大的展馆：[汉诺威国际展览中心(Hanover Fariground Cender)](https://en.wikipedia.org/wiki/Hanover_Fairground)，占地100万平方米，共27个展馆，室内展览面积达到49.8万平方米,停车场可停放50,000部车辆，位列全球第一位。下图为2015全球展馆**室内面积**排行榜。
 
-![](/images/auto/exhibition/hall.charts.png)
+![](/images/posts/exhibition/hall.charts.png)
 
 再来一张Google Earth中汉诺威国际展览中心的显示：
 
-![](/images/auto/exhibition/hanover.fairground-birdeye.jpeg)
+![](/images/posts/exhibition/hanover.fairground-birdeye.jpeg)
 
 实景模式只有门口路上的：
 
-![](/images/auto/exhibition/hanover.fairground-real.jpeg)
+![](/images/posts/exhibition/hanover.fairground-real.jpeg)
 
 我的OPPO显示上面一栏是白色的，搞了半天没搞好，凑合看吧。
 
@@ -73,7 +76,7 @@ Messe：翻开我十多年前上学时候买的朗文双解，是没有messe这�
 
 中文网站上有用的除了教你怎么飞机转火车地到地方，就剩一张图了（此图和前面卫星图是对应的，只不过画的笔直了一些）：
 
-![](/images/auto/exhibition/map-cn.png)
+![](/images/posts/exhibition/map-cn.png)
 
 从占地面积上看：动力传动展、工业自动化展、能源展 是最大的，然后是工业零配件展、数字化工厂展。前面实景模式的门口是最南边的门口的，即：SOUTH 1。
 
@@ -103,11 +106,11 @@ OK，网站遛一遍后来说几个我自己的关注点：
 
 比如：自动化是8、9、11、12、14-17馆，先看8馆吧，下载 hall8.pdf，如图
 
-![](/images/auto/exhibition/hall8.png)
+![](/images/posts/exhibition/hall8.png)
 
 图中的D19、D20、D24、D28 八九不离十就是业内顶尖了，再从展商列表的excel文件中做个筛选，筛出 Hall8 的 D20
 
-![](/images/auto/exhibition/hall8-d20.png) 
+![](/images/posts/exhibition/hall8-d20.png) 
 
 喔，都是大公司吧
 

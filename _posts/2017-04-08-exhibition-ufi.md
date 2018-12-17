@@ -1,12 +1,15 @@
 ---
 title: "国际展览会联盟（UFI）"
+date:   2017-04-08 11:16:00 +0800
+categories: 
+    - auto
+tags:
+    - UFI
+    - 展会
 image: 
   path: https://www.ufi.org/wp-content/uploads/2016/01/1932.jpg
-  thumbnail: https://www.ufi.org/wp-content/uploads/2016/01/1932.jpg
   caption: "Photo from [ufi](https://www.ufi.org/about/ufi-history/)"
 ---
-
-2017.4.8
 
 国际性的展会联盟有： AUMA, FKM, GDG, UFI, and CEFA
 

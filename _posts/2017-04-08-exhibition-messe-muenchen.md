@@ -1,16 +1,19 @@
 ---
 title: "慕尼黑展系(Messe Muenchen)"
+date:   2017-04-08 01:16:00 +0800
+categories: 
+    - auto
+tags:
+    - 慕尼黑
+    - 展会
 image: 
-  path: /images/auto/exhibition/messe-muenchen.de.png
-  thumbnail: /images/auto/exhibition/messe-muenchen.de.png
+  path: /images/posts/exhibition/messe-muenchen.de.png
   caption: "Photo from [messe-muenchen](https://messe-muenchen.de)"
 ---
 
-2017.4.8
-
 Messe Muenchen 简称 MM，LOGO：
 
-![](/images/auto/exhibition/Logo_Messe_Munchen.png)
+![](/images/posts/exhibition/Logo_Messe_Munchen.png)
 
 LOGO是两个斜着写的MM，但又表示两束光线，照亮前方的路，哈哈 —— 我瞎掰的，主要是为了让你记住这个LOGO。
 
@@ -27,9 +30,9 @@ LOGO是两个斜着写的MM，但又表示两束光线，照亮前方的路，�
         + MOC Veranstaltungs center München. 
     - [慕尼黑展览（上海）有限公司](http://www.mm-sh.com/cn/)：这是我见到的几家德国展览公司的中国分工司里网站体验做的最好的，分类清晰、直达，主板的每场展会都制作了独立的网站，并标注明确，没有试图把人绕晕的杂乱信息……
 * 展会
-    - LASER World of PHOTONICS（慕尼黑光博会）：[上海版](http://www.photonicschina.cn/): [德国版](http://www.world-of-photonics.com/) ![](/images/auto/exhibition/mm-1.jpg)
-    - 慕尼黑电子展：[上海版](http://www.electronicachina.com.cn/zh-cn/)：[德国版](http://electronica.de) ![](/images/auto/exhibition/mm-2.jpg)
-    - 慕尼黑电子生产设备展：[上海版](http://www.productronicachina.com.cn/zh-cn/)：[德国版](http://www.productronica.com/index-2.html) ![](/images/auto/exhibition/mm-3.jpg)
+    - LASER World of PHOTONICS（慕尼黑光博会）：[上海版](http://www.photonicschina.cn/): [德国版](http://www.world-of-photonics.com/) ![](/images/posts/exhibition/mm-1.jpg)
+    - 慕尼黑电子展：[上海版](http://www.electronicachina.com.cn/zh-cn/)：[德国版](http://electronica.de) ![](/images/posts/exhibition/mm-2.jpg)
+    - 慕尼黑电子生产设备展：[上海版](http://www.productronicachina.com.cn/zh-cn/)：[德国版](http://www.productronica.com/index-2.html) ![](/images/posts/exhibition/mm-3.jpg)
 
 慕尼黑展览公司在中国很克制，每年只有十多场，并且展会类型大多和德国相同，尚没有像法兰克福和光亚一样，与国内某家公司合作开发展会，而是自己独自奋斗。
 
@@ -46,7 +49,7 @@ LOGO是两个斜着写的MM，但又表示两束光线，照亮前方的路，�
 
 光博会既然是德国人举办的，自然来了很多德国品牌，我看到了一张今年光博会的德国机器视觉展团的列表，每家都有哪些产品列的非常仔细，我最近已经重点参考了此列表：
 
-![](/images/auto/exhibition/laser.vision.jpg)
+![](/images/posts/exhibition/laser.vision.jpg)
 
 光博会作为亚洲第一光电盛宴，今年提出了“智能光制造”时代的概念，猛一下估计会被吓住，“智能光制造”，是智能制造里的光学部分？还是智能地制造光？这年头各个都要提出自己的概念，活的都不容易。
 

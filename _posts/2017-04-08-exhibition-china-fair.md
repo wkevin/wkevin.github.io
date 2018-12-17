@@ -1,11 +1,14 @@
 ---
 title: "中国特色展系"
+date:   2017-04-08 10:16:00 +0800
+categories: 
+    - auto
+tags:
+    - 中国
+    - 展会
 image: 
   path: http://image.cn.made-in-china.com/34f27j01ttQETkTziaVI/made-in-china.jpg
-  thumbnail: http://image.cn.made-in-china.com/34f27j01ttQETkTziaVI/made-in-china.jpg
 ---
-
-2017.4.8
 
 在中国，数得上的大型展会都是商务部指导、市政府牵头办起来的，尚没有像“汉诺威展览公司”、“法兰克福展览有限公司”、“慕尼黑国际博览集团”这样独立运作的公司来办展会，这是中国特色，所以本文标题叫做：中国特色展系。
 

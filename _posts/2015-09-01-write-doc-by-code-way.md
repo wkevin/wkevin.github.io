@@ -1,11 +1,14 @@
 ---
 title: "用写代码的方式写文档"
+date:   2015-09-01 10:16:00 +0800
+categories: 
+    - it
+tags:
+    - markdown
+    - workflow
 image: 
   path: https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1613194509,3683268681&fm=26&gp=0.jpg
-  thumbnail: http://sp.shang.cn/file/upload/201512/29/10-59-25-50-1.jpg
 ---
-
-2015.9
 
 摘要
 >本文旨在说服工程师们，尤其是敏捷团队的成员，在撰写过程文档时，放弃传统方式，尝试使用：1、Markdown撰写；2、SVN/Git版本管理；3、HttpServer排版；—— 3合1的新方式。   
@@ -219,7 +222,7 @@ markdown的细节本文不表，可参考：
 
 ### 个人工作流
 
-![](/images/it/write.doc.by.code.way/persenal.png)
+![](/images/posts/2015-09-01-write-doc-by-code-way/persenal.png)
 
 ### 团队工作流
 
@@ -231,7 +234,7 @@ markdown的细节本文不表，可参考：
 4. 读者通过权限受控的http访问svn服务器上的html文件到
 5. 撰写人更新文档，需重新本地编译，上传markdown和html文档 
 
-![团队工作流1](/images/it/write.doc.by.code.way/team-1.png)
+![团队工作流1](/images/posts/2015-09-01-write-doc-by-code-way/team-1.png)
 
 **工作流2：**
 
@@ -241,7 +244,7 @@ markdown的细节本文不表，可参考：
 4. 读者通过权限受控的http访问svn服务器上的markdown文件，动态转换为html
 5. 撰写人更新文档，仅上传markdown即可
 
-![团队工作流2](/images/it/write.doc.by.code.way/team-2.png)
+![团队工作流2](/images/posts/2015-09-01-write-doc-by-code-way/team-2.png)
 
 对比两种工作流：
 
@@ -260,10 +263,10 @@ markdown的细节本文不表，可参考：
 这是萝卜白菜的问题，无论你用windows记事本、vi、还是锤子便签，我都是支持的，上一张图看看把：
 
 **sublime中畅快的书写和预览markdown**
-![](/images/it/write.doc.by.code.way/markdown.in.sublime.png)
+![](/images/posts/2015-09-01-write-doc-by-code-way/markdown.in.sublime.png)
 
 **通过SVN来合并、更新文档，并查看修改记录，快捷追溯**
-![](/images/it/write.doc.by.code.way/scm.file.by.svn.png)
+![](/images/posts/2015-09-01-write-doc-by-code-way/scm.file.by.svn.png)
 
 ### HttpServer动态编译Markdown的实现
 
@@ -273,14 +276,14 @@ HttpServer的Markdown转换插件还是不难找的，无论是IIS还是Apache�
 * https://github.com/erusev/parsedown
 
 **配置Apache识别.md文件**
-![](/images/it/write.doc.by.code.way/config.apache.markdown.png)
+![](/images/posts/2015-09-01-write-doc-by-code-way/config.apache.markdown.png)
 
 配置完后就可以这样访问md文件了：`http://xxx.xxx.xxx.xxx/ReadMe.md`。 
 
 比如本文：[http://10.9.111.222/articles/experiences/用写代码的方式写文档/用写代码的方式写文档.md](http://10.9.111.222/articles/experiences/用写代码的方式写文档/用写代码的方式写文档.md) —— 如果你阅读的是word版，不妨阅读一下网页版，与word相比，会经常更新的哦。
 
 **通过浏览器访问.md后缀的Markdown文件**(截图中为本文的[网络地址](http://10.9.111.222/articles/experiences/用写代码的方式写文档/用写代码的方式写文档.md))
-![](/images/it/write.doc.by.code.way/access.markdown.by.apache.png)
+![](/images/posts/2015-09-01-write-doc-by-code-way/access.markdown.by.apache.png)
 
 ### 为Markdown增加目录(TOC)
 

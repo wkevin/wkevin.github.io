@@ -1,5 +1,13 @@
 ---
 title: "Python IDE 常用功能及快捷键对比"
+date:   2017-04-13 10:16:00 +0800
+categories: 
+    - it
+tags:
+    - Python
+    - PyCharm
+    - VSCode
+    - jupyter
 image: 
   path: http://img.mp.itc.cn/upload/20160902/d4d813ba49224604b5b3de8d99296c0f_th.jpg
   thumbnail: http://img.mp.itc.cn/upload/20160902/d4d813ba49224604b5b3de8d99296c0f_th.jpg
