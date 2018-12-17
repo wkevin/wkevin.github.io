@@ -18,11 +18,11 @@
 remote_theme: mmistakes/so-simple-theme
 
 locale: zh-CN
-title: "Kevin's Blog"
-description: "业精于勤荒于嬉"
+title: "Kevin Wang"
+description: "语默动静体安然"
 baseurl: ""
 url: "https://wkevin.github.io"
-logo: "/images/horse.jpg"
+logo: "/images/mac.jpeg"
 date_format: "%b %-d, %Y"
 read_time: false
 words_per_minute: # 200
