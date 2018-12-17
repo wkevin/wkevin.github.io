@@ -1,0 +1,11 @@
+author:
+  name: Kevin
+  picture: /images/angry.bird.jpg
+  twitter: "@wkevin27"
+  links:
+    - title: Twitter
+      url: https://twitter.com/wkevin27
+      icon: fab fa-twitter-square
+    - title: GitHub
+      url: https://github.com/wkevin
+      icon: fab fa-github-square

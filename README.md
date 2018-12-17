@@ -27,8 +27,10 @@
     - [open source Jekyll theme hosted on GitHub](https://github.com/topics/jekyll-theme)
         - `remote_theme: xxx` —— 需要该theme已经gem化，Github Pages能够在云端找到并安装
             - https://github.com/mmistakes/minimal-mistakes
-            - https://github.com/mmistakes/so-simple-theme —— 本Blog使用
+            - https://github.com/mmistakes/so-simple-theme —— 简洁、大方，本Blog使用
                 - `data/navigation.yml` 定义导航栏
+                - 10种layout：home, posts, post, collection(等同pages), page, categories, category,  tags, tag, search.
+                - 2种 entries_layout ： list, grid
                 - 根目录下的 .md 文件对应每个子目录：posts、categories、tags、ai、auto、search —— 其中 posts、ai、auto 包含md文件，其他是视图
                 - posts、ai、auto 分别对应 `_post`、`_ai`、`_auto` 文件夹
         - fork -- modify
