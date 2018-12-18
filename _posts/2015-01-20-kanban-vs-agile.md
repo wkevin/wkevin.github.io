@@ -67,6 +67,7 @@ David Aderson（戴维 安德森），这哥们1956年生，在Moto、Microsoft�
 嗯，这么想就对了，人家老安说了：引入看板就是为了对那些拒绝敏捷的团队进行改进。
 
 最后，安德森2010年写了一本书：《Kanban: Successful Evolutionary Change for Your Technology Business》，2014年1月由阿里的项目经理 章显洲 老师翻译，Agilean联合创始人 路宁 老师联手出版。
+
 ![](https://img3.doubanio.com/view/subject/l/public/s27174102.jpg)
 
 * [amazon](http://www.amazon.cn/gp/aw/d/B00HNKMDN2)
