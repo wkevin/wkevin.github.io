@@ -3,6 +3,9 @@ wKevin:
   picture: /images/angry.bird.jpg
   twitter: "@wkevin27"
   links:
+    - title: Weibo
+      url: https://weibo.com/wkevin27
+      icon: fab fa-weibo
     - title: Twitter
       url: https://twitter.com/wkevin27
       icon: fab fa-twitter-square
