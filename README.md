@@ -38,3 +38,5 @@
                     - posts、ai、auto 分别对应 `_post`、`_ai`、`_auto` 文件夹
             - fork -- modify
                 - https://github.com/daattali/beautiful-jekyll
+- Others
+    - [font awesome](https://fontawesome.com)
