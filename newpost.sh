@@ -18,12 +18,12 @@ if [ ! -f $fn ]; then
     echo "description: " >>$fn
     echo "author: wKevin" >>$fn
     echo "image:      " >>$fn
-    echo "	path: " >>$fn
-    echo "	thumbnail: " >>$fn
+    echo "    path: " >>$fn
+    echo "    thumbnail: " >>$fn
     echo "categories: " >>$fn
-    echo "	- " >>$fn
+    echo "    - " >>$fn
     echo "tags:" >>$fn
-    echo "	- " >>$fn
+    echo "    - " >>$fn
     echo "---" >>$fn
     echo "Creat sucess!"
 else
