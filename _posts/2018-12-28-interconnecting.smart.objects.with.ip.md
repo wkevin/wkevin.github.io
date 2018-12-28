@@ -16,7 +16,7 @@ tags:
 - [《Interconnecting Smart Objects with IP》](https://www.amazon.com/Interconnecting-Smart-Objects-IP-Internet/dp/0123751659): JP Vasseur, Adam Dunkels; 2010; 4.5星
 - [《基于IP的物联网架构技术与应用》](https://book.douban.com/subject/6722585/): 人民邮电；田辉（等众人）；2011.8；
 
-Smart Object，译者翻译成 **智能物件**，见词知意，指物联网的终端设备、现在时髦点说Edge设备、尘设备、雾设备…… 2010年那是还没有IoT这个词，物联网这个词也是刚刚兴起，所以在书中看不到IoT、NB-IoT、LoRa……这些名次和技术。
+Smart Object，译者翻译成 **智能物件**，见词知意，指物联网的终端设备、现在时髦点说Edge设备、尘设备、雾设备…… 2010年那是还没有IoT这个词，物联网这个词也是刚刚兴起，所以在书中看不到IoT、NB-IoT、LoRa……这些名词和技术。
 
 但译者不厚道的是原书只是讲智能物件的，即：物联网终端，译者翻译成物联网架构 —— 我觉得这是故意的张冠李戴，恶意的曲解原意，只是为了书的销量。
 
@@ -30,9 +30,9 @@ Smart Object，译者翻译成 **智能物件**，见词知意，指物联网的
 
 **智能物件（SO）**这个词可能从来在中国没有流行起来，很少在各大杂志、展会、宣传中看到这个词汇，百度指数中也没有收录，而IoT、物联网这类词汇则是连年增长的。
 
-![](images/posts/2018-12-28-interconnecting.smart.objects.with.ip/baidu.trends.iot.png)
+![](/images/posts/2018-12-28-interconnecting.smart.objects.with.ip/baidu.trend.iot.png)
 
-![](images/posts/2018-12-28-interconnecting.smart.objects.with.ip/baidu.trends.wlw.png)
+![](/images/posts/2018-12-28-interconnecting.smart.objects.with.ip/baidu.trend.wlw.png)
 
 本书我用4h看完中文版的，我来总结一下**作者的想表达的重点**：
 
