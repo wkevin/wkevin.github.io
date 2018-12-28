@@ -7,6 +7,8 @@ if [ $# -gt 0 ]; then
     name=$1
 fi
 
+mkdir "images/posts/"$date-$name
+
 fn="_posts/"$date-$name".md"
 echo "will creat file:" $fn
 
