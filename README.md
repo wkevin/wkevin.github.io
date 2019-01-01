@@ -31,11 +31,19 @@
             - `remote_theme: xxx` —— 需要该theme已经gem化，Github Pages能够在云端找到并安装
                 - https://github.com/mmistakes/minimal-mistakes
                 - https://github.com/mmistakes/so-simple-theme —— 简洁、大方，本Blog使用
-                    - `data/navigation.yml` 定义导航栏
-                    - 10种layout：home, posts, post, collection(等同pages), page, categories, category,  tags, tag, search.
-                    - 2种 entries_layout ： list, grid
-                    - 根目录下的 .md 文件对应每个子目录：posts、categories、tags、ai、auto、search —— 其中 posts、ai、auto 包含md文件，其他是视图
-                    - posts、ai、auto 分别对应 `_post`、`_ai`、`_auto` 文件夹
+                    - 简要说明
+                        - `data/navigation.yml` 定义导航栏
+                        - 10种layout：home, posts, post, collection(等同pages), page, categories, category,  tags, tag, search.
+                        - 2种 entries_layout ： list, grid
+                    - 个性化配置方法
+                        - `_config.yml` 中可以在 `[head|footer]_scripts` 中添加 js 的路径，注意是下滑线
+                        - `bundle show jekyll-theme-so-simple` 查看本插件源文件的位置
+                        - 从源文件中拷贝 `_includes/[head|footer]-custom.html` 到blog目录下，根据情况修改 
+                        - 从源文件中拷贝 `assets/css/main.scss` 到blog目录下，酌情修改
+                        - 从源文件中拷贝 `assets/js/main.js` 到blog目录下，酌情修改
+                    - 我的配置：
+                        - 根目录下的 .md 文件对应每个子目录：posts、categories、tags、ai、auto、search —— 其中 posts、ai、auto 包含md文件，其他是视图
+                        - posts、ai、auto 分别对应 `_post`、`_ai`、`_auto` 文件夹
             - fork -- modify
                 - https://github.com/daattali/beautiful-jekyll
 - Others
