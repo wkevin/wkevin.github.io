@@ -5,6 +5,7 @@
     /* global kityminder */
     var km = window.km = new kityminder.Minder();
     km.setup('#minder-view');
+    km.getRenderTarget().style.height = "500px";
     km.disable();
     km.execCommand('hand');
     km.on('dblclick', function() {
@@ -14,11 +15,13 @@
         if ( cont.style.position == "absolute"){
             cont.style.position = "relative";
             cont.style.height = "500px";
+            cont.style.top = "1px";
             cont.style.bottom = "";
         }else{
             cont.style.position = "absolute";
             cont.style.height = null;
             cont.style.bottom = "10px";
+            cont.style.top = "60px";
         }
         // alert("test click over")
 	});
