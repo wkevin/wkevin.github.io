@@ -1,0 +1,26 @@
+<!-- start custom footer snippets -->
+
+<script type="text/javascript">
+    // 创建 km 实例
+    /* global kityminder */
+    var km = window.km = new kityminder.Minder();
+    km.setup('#minder-view');
+    km.disable();
+    km.execCommand('hand');
+    km.on('dblclick', function() {
+        // var cont = km.getRenderContainer()
+        var cont = km.getRenderTarget()
+        // alert("test click")
+        if ( cont.style.position == "absolute"){
+            cont.style.position = "relative";
+            cont.style.height = "500px";
+            cont.style.bottom = "";
+        }else{
+            cont.style.position = "absolute";
+            cont.style.height = null;
+            cont.style.bottom = "10px";
+        }
+        // alert("test click over")
+	});
+</script>
+<!-- end custom footer snippets -->
