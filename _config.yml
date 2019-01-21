@@ -17,12 +17,6 @@
 #theme: jekyll-theme-so-simple
 remote_theme: mmistakes/so-simple-theme
 
-head_scripts:
-  - /assets/js/kity.min.js
-  - /assets/js/kityminder.core.min.js
-footer_scripts:
-  - /assets/js/main.js
-
 locale: zh-CN
 title: "Kevin Wang"
 description: "语默动静体安然"
