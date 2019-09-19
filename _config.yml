@@ -89,9 +89,6 @@ collections:
   auto:
     output: true
     permalink: /:collection/:path/
-  auto_:
-    output: true
-    permalink: /:collection/:path/
   it:
     output: true
     permalink: /:collection/:path/
@@ -118,14 +115,6 @@ defaults:
   - scope:
       path: "_auto"
       type: auto
-    values:
-      layout: page
-      comments: true
-      share: true
-  # Auto defaults
-  - scope:
-      path: "_auto_"
-      type: auto_
     values:
       layout: page
       comments: true

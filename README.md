@@ -43,8 +43,12 @@
                         - 从源文件中拷贝 `assets/js/main.js` 到blog目录下，酌情修改
                     - 我的配置：
                         - 根目录下的 .md 文件对应每个子目录：posts、categories、tags、ai、auto、search —— 其中 posts、ai、auto 包含md文件，其他是视图
-                        - posts、ai、auto 分别对应 `_post`、`_ai`、`_auto` 文件夹
+                            - `_config.yml` 中定义了默认值：随笔是post，其他是page —— 不需要每篇文章中再定义
+                        - posts、ai、auto 分别对应 `_post`、`_ai`、`_auto` 文件夹 —— `_config.yml` 中定义的path
+                        - 根目录下的 `ai/auto/it.md` 中定义了 entries_layout 使用 grid 
             - fork -- modify
                 - https://github.com/daattali/beautiful-jekyll
 - Others
     - [font awesome](https://fontawesome.com)
+- 其他说明
+    - 新建post可以用 `./newpost.sh`，同时创建一个post 及其images下的同名文件夹放图片
