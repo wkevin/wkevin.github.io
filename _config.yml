@@ -18,8 +18,6 @@
 remote_theme: mmistakes/so-simple-theme
 
 head_scripts:
-  - /assets/js/kity.min.js
-  - /assets/js/kityminder.core.min.js
 footer_scripts:
 
 locale: zh-CN
