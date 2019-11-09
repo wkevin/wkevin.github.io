@@ -26,7 +26,7 @@ locale: zh-CN
 title: "Kevin Wang"
 description: "语默动静体安然"
 baseurl: ""
-url: "https://wkevin.github.io"
+url: "https://wkevin.gitee.io"
 logo: "/images/mac.jpeg"
 date_format: "%b %-d, %Y"
 read_time: false
