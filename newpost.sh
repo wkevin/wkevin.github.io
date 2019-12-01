@@ -27,7 +27,7 @@ if [ ! -f $fn ]; then
     echo "tags:" >>$fn
     echo "    - " >>$fn
     echo "---" >>$fn
-    echo "![](/images/post/"$date"-"$name"/)" >>$fn
+    echo "![](/images/posts/"$date"-"$name"/)" >>$fn
     echo "Creat sucess!"
 else
     echo "Creat fail! File is existed"
