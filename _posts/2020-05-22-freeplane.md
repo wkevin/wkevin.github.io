@@ -21,4 +21,6 @@ $ sudo apt install freeplane
 
 刚打开软件，会感觉很不适应，尤其用惯了 XMind 这种美观大气的，经过一番调教，总算满意了，操作方法如下图：
 
+>温馨提示：下图即是用Freeplane制作并导出的SVG矢量图，建议图片上右键-新标签页打开，然后就可以无限放大，无损查看，还能选中拷贝。
+
 ![](/images/posts/2020-05-22-freeplane/Freeplane.svg)
