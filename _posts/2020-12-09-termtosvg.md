@@ -10,7 +10,7 @@ tags:
   - SVG
 ---
 
-![](/images/posts/2020-12-09-termtosvg/record-window_frame_js.svg)
+![](/images/posts/2020-12-09-termtosvg/record-dracula.svg)
 
 上图竟然是个 SVG 文件，可以单独下载，不是视频，SVG 矢量文件，即：
 
@@ -38,7 +38,7 @@ $ pip3 install termtosvg
 
 录制成的 txt 文件长这样：
 
-```txt
+```bash
 {"version": 2, "width": 105, "height": 24}
 [0.0, "o", "\u001b]7;file://MBP.local/Users/wangkevin/workspace/osrc/webrtc/webrtc\u0007"]
 [1.783982, "o", "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                        \r \r"]
@@ -61,9 +61,8 @@ $ pip3 install termtosvg
 
 ![](/images/posts/2020-12-09-termtosvg/a-progress_bar.svg)
 
-渲染出 window_fram（本文第一幅图）、dracula、ubuntu 等
+渲染出 dracula（本文第一幅图）、ubuntu 等
 
-![](/images/posts/2020-12-09-termtosvg/record-dracula.svg)
 ![](/images/posts/2020-12-09-termtosvg/record-ubuntu.svg)
 
 各种渲染模板给出了多姿多彩的关键字高亮、外壳、滚动条…… 放在 Jenkins 的 CI/CD 中，多有意思的事情啊。
