@@ -20,7 +20,7 @@ tags:
 
 今天挖到一个宝： [termtosvg](https://github.com/nbedos/termtosvg)
 
-原本是看到一个推荐：redis 的封装 [iredis](https://iredis.io/)，首页的动图我以为是录屏，无意间右键下载了一下，没想到是 svg 文件，顿感意外，不知道怎么实现的。svg 我已经解除过好多年了，近 5 年来的画图也基本 100% 是 svg 格式了，动画也做过一些，但不知道还能这么玩。
+原本是看到一个推荐：redis 的封装 [iredis](https://iredis.io/)，首页的动图我以为是录屏，无意间右键下载了一下，没想到是 svg 文件，顿感意外，不知道怎么实现的。svg 我已经接触好多年了，近 5 年来的画图也基本 100% 是 svg 格式了，动画也做过一些，但不知道还能这么玩。
 
 一通搜索，找到了 [termtosvg](https://github.com/nbedos/termtosvg)，安装很简单：
 
@@ -54,8 +54,8 @@ $ pip3 install termtosvg
 
 先用 txt 文件保存，后期再渲染成 svg 有 2 个好处：
 
-1. txt 文件更小，通常是 svg 文件的 1/10，更利于分享、git 管理、CI/CD。
-2. 后期渲染时再根据需求确定 template，比录制时就确定 template 更能满足灵活需求
+1. txt 文件更小，通常是 svg 文件的 1/10，更利于分享、git 管理、CI/CD。—— 而 svg 又是视频格式的 1/10，所以 txt 简直完美。
+2. 后期渲染时再根据需求确定 template，比录制时就确定 template 更能满足灵活需求。
 
 比如我前面的录制保存为了 record.txt ，后期渲染时这样操作：
 
