@@ -31,8 +31,8 @@ $ pip3 install termtosvg
 使用也是简单：
 
 1. `termtosvg foo/bar.svg [-t <template>]` 录屏，并直接保存为 svg 文件
-2. `termtosvg record foo/bar.txt [-t <template>]` 录屏，并保存为 txt 文件
-3. `termtosvg render foo/bar.txt bar/foo.svg` 将前面保存的 txt 文件渲染成 svg 文件
+2. `termtosvg record foo/bar.txt` 录屏，并保存为 txt 文件
+3. `termtosvg render foo/bar.txt bar/foo.svg [-t <template>]` 将前面保存的 txt 文件渲染成 svg 文件
 
 1 好理解，2、3 有什么用呢？—— 答案是：非常有用。
 
