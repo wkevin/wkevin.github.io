@@ -13,9 +13,9 @@ array=( \
     # solarized_light \
     # terminal_app \
     ubuntu \
-    window_frame_js \
+    # window_frame_js \
     # window_frame_powershell \
-    # window_frame \
+    window_frame \
     # xterm \
     )
 
