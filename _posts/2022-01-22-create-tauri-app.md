@@ -11,14 +11,14 @@ tags:
 
 ![](/images/posts/2022-01-22-create-tauri-app/icon.png)
 
-一直想用前后端技术栈做个跨平台的 APP，前几年了解过 Electron，到后来一直没有应用场景，就放下了，最近又掌握了一下最新情况：
+一直想用前后端技术栈做个跨平台（Win/Linux/macOS）的 APP，前几年了解过 Electron，到后来一直没有应用场景，就放下了，最近又掌握了一下最新情况：
 
-| 框架     | 运行目标 OS     | 前端                       | 后端 |
-| -------- | --------------- | -------------------------- | ---- |
-| Electron | Win/Linux/macOS | Angular/VUE/React          | 不限 |
-| Wails    | Win/Linux/macOS |                            | go   |
-| Goxygen  | Win/Linux/macOS | Angular/VUE/React          | go   |
-| Tauri    | Win/Linux/macOS | Angular/VUE/React/Vite/... | rust |
+| 框架     | 前端                       | 后端       |
+| -------- | -------------------------- | ---------- |
+| Electron | Angular/VUE/React          | typescript |
+| Wails    | VUE/React                  | go         |
+| Goxygen  | Angular/VUE/React          | go         |
+| Tauri    | Angular/VUE/React/Vite/... | rust       |
 
 恰逢有个场景，就试了一下 [Tauri](https://tauri.studio/)，相比 Electron, Tauri 不将 node 和 chromium 打包到最终 APP，所以最终构建出的版本会小很多。
 
@@ -38,7 +38,7 @@ tags:
 | `>>Running initial command(s)`                          | 安装 create-vite                                       | 正常                    | 正常                   |
 | `>> Installing any additional`<br>`needed dependencies` | 安装 vue,vite,ts,tauri-apps/cli 直接包及其 370+ 依赖包 | 优秀 [注 1]             | 偶发失败 [注 2]        |
 | `>> Updating "package.json"`                            | 将项目配置写入 package.json                            | 正常                    | 正常                   |
-| `>> Running "tauri init"`                               | 先 Download Rust CLI [注 3]，然后执行初始化[注 4]      | 不用反复 Rust CLI       | 需要反复 Rust CLI      |
+| `>> Running "tauri init"`                               | 先 Download Rust CLI [注 3]，然后执行初始化[注 4]      | 不用反复下载            | 需要反复下载           |
 | `>> Updating "tauri.conf.json"`                         |                                                        |                         |                        |
 | `>> Running final command(s)`                           | `vue-tsc --noEmit && vite build`                       |                         |                        |
 | 运行                                                    | `cd myproject`                                         | `yarn tauri dev`        | `npm run tauri dev`    |
