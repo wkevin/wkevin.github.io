@@ -22,7 +22,14 @@ tags:
 
 前几天恰逢有个场景，就试了一下 [Tauri](https://tauri.studio/)，相比 Electron, Tauri 不会把 node 和 chromium 打包到最终 APP，所以最终构建出的版本会小很多，运行速度也快很多。
 
-用了 2 天跑起来了一个基本的 APP，前端 `Vite + VUE4 + Element-plus + TypeScript`，后端 Rust。尤其是在公司 Proxy 的后面，第一步脚手架搭建环境通常会遇到一些困难，记录如下。
+用了 2 天跑起来了一个基本的 APP，前端 `Vite + VUE4 + Element-plus + TypeScript`，后端 Rust，过程记录如下。
+
+### 脚手架创建项目
+
+最困难的不过 2 点：
+
+1. 适配公司 Proxy
+2. 适配 github 访问和下载
 
 执行脚手架之前，首先还是要配置 npm 镜像源和 no-proxy 配置项：
 
@@ -34,17 +41,16 @@ tags:
 - yarn: `yarn create tauri-app`
 - npm: `npx create-tauri-app`
 
-| 阶段                                                    | 说明                                                   | yarn             | npm                 |
-| ------------------------------------------------------- | ------------------------------------------------------ | ---------------- | ------------------- |
-| 准备脚手架                                              | Install create-tauri-app@1.0.0-beta.4                  | 正常             | 正常                |
-| 交互式配置                                              | app name/title/UI reciped 等                           | 正常             | 正常                |
-| `>>Running initial command(s)`                          | 安装 create-vite                                       | 正常             | 正常                |
-| `>> Installing any additional`<br>`needed dependencies` | 安装 vue,vite,ts,tauri-apps/cli 直接包及其 370+ 依赖包 | 优秀<br>[注 1]   | 偶发失败<br>[注 2]  |
-| `>> Updating "package.json"`                            | 将项目配置写入 package.json                            | 正常             | 正常                |
-| `>> Running "tauri init"`                               | 先 Download Rust CLI [注 3]，然后执行初始化[注 4]      | 一次下载         | 反复下载            |
-| `>> Updating "tauri.conf.json"`                         |                                                        |                  |                     |
-| `>> Running final command(s)`                           | `vue-tsc --noEmit && vite build`                       |                  |                     |
-| 运行                                                    | `cd myproject`                                         | `yarn tauri dev` | `npm run tauri dev` |
+| 阶段                                                    | 说明                                                   | yarn           | npm                |
+| ------------------------------------------------------- | ------------------------------------------------------ | -------------- | ------------------ |
+| 准备脚手架                                              | Install create-tauri-app@1.0.0-beta.4                  | 正常           | 正常               |
+| 交互式配置                                              | app name/title/UI reciped 等                           | 正常           | 正常               |
+| `>>Running initial command(s)`                          | 安装 create-vite                                       | 正常           | 正常               |
+| `>> Installing any additional`<br>`needed dependencies` | 安装 vue,vite,ts,tauri-apps/cli 直接包及其 370+ 依赖包 | 优秀<br>[注 1] | 偶发失败<br>[注 2] |
+| `>> Updating "package.json"`                            | 将项目配置写入 package.json                            | 正常           | 正常               |
+| `>> Running "tauri init"`                               | 先 Download Rust CLI [注 3]，然后执行初始化[注 4]      | 一次下载       | 反复下载           |
+| `>> Updating "tauri.conf.json"`                         |                                                        |                |                    |
+| `>> Running final command(s)`                           | `vue-tsc --noEmit && vite build`                       |                |                    |
 
 注：
 
@@ -53,4 +59,51 @@ tags:
 3. Downloading Rust CLI 下载的是 rust 版本的 tauri-cli，会把这个命令放在 `node_modules/@tauri-apps/cli/bin/` 下面，是从 github 上下载的，准备好科学上网，一旦成功最好保存好。但 yarn 就放心吧，以后用的都是软连接，不会再重复下载了。
 4. `$ tauri init --app-name demo --window-title demo --dist-dir ../dist --dev-path http://localhost:3000 --ci` 会创建 src-tauri 文件夹。
 
-Good luck!
+### 项目运行
+
+项目创建成功后，就可以直接运行，顺利的话就直接看到 VUE 的界面了：
+
+- yarn: `yarn tauri dev`
+- npm: `npm run tauri dev`
+
+过程有这么几步：
+
+1. `tauri-cli tauri dev`: 执行 rust 命令 tauri-cli
+2. 使用 vite 编译和打包 vue 前端，server：http://localhost:3000/
+3. 下载必要的 rust 依赖包，并编译，这个规模还挺大，截图看一下：
+
+```sh
+  ......
+       Fetch [=================>       ]  73.50%, (65264/114324) resolving deltas
+  ......
+  Downloaded cfg_aliases v0.1.1 (registry `sjtu`)
+  Downloaded chrono v0.4.19 (registry `sjtu`)
+  Downloaded cocoa v0.24.0 (registry `sjtu`)
+  Downloaded cocoa-foundation v0.1.0 (registry `sjtu`)
+  Downloaded bstr v0.2.17 (registry `sjtu`)
+  Downloaded constant_time_eq v0.1.5 (registry `sjtu`)
+  Downloaded 213 crates (9.8 MB) in 16.11s
+   Compiling libc v0.2.113
+   Compiling cfg-if v1.0.0
+   Compiling proc-macro2 v1.0.36
+   Compiling unicode-xid v0.2.2
+   Compiling syn v1.0.86
+```
+
+一切顺利的话，就能看到封装成 APP 的 VUE 了：
+
+![](/images/posts/2022-01-22-create-tauri-app/app.png)
+
+### 补充
+
+顺利运行了 1 天，突然在 `npm run tauri dev` 的第 1 步报错：
+
+```sh
+Error: failed to get project out directory
+
+Caused by:
+0: failed to parse cargo config file
+1: newline in string found at line 12 column 33
+```
+
+我以为是 `src-tauri/` 下的 Cargo.toml 或 tauri.conf.json 被我修改坏了，反复修改也不行，后来琢磨出来可能不是，去看了一眼 `~/.cargo/config`，原来被我改坏了，哎！
