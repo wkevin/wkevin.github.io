@@ -20,16 +20,19 @@ tags:
 | Goxygen  | Angular/VUE/React          | go         |
 | Tauri    | Angular/VUE/React/Vite/... | rust       |
 
-恰逢有个场景，就试了一下 [Tauri](https://tauri.studio/)，相比 Electron, Tauri 不将 node 和 chromium 打包到最终 APP，所以最终构建出的版本会小很多。
+前几天恰逢有个场景，就试了一下 [Tauri](https://tauri.studio/)，相比 Electron, Tauri 不会把 node 和 chromium 打包到最终 APP，所以最终构建出的版本会小很多，运行速度也快很多。
 
-用了 2 天跑起来了一个基本的 APP，前端 `Vite + VUE4 + Element-plus + TypeScript`，后端 Rust，在公司 Proxy 后面，第一步脚手架搭建环境通常会遇到一些困难，记录如下：
+用了 2 天跑起来了一个基本的 APP，前端 `Vite + VUE4 + Element-plus + TypeScript`，后端 Rust。尤其是在公司 Proxy 的后面，第一步脚手架搭建环境通常会遇到一些困难，记录如下。
 
-执行 `yarn create tauri-app` 或 `npx create-tauri-app` 之前，首先还是要配置 npm 镜像源和 no-proxy 配置项：
+执行脚手架之前，首先还是要配置 npm 镜像源和 no-proxy 配置项：
 
-- `npm config set registry <公司内 npm 镜像源>` 公网上当然是用淘宝源、中科大源……
-- `npm config set no-proxy <公司内 npm 镜像源>` 公网上则不需要，公司内则必须，因为 npm 访问镜像源不使用 proxy，但后面的 Download Rust CLI 等操作又需要 proxy，但是 npm 又不使用 shell 的 no_proxy 环境变量，所以这个配置太关键了，搞了我至少 2h 才在 stackoverflow 上看到网友的这个解决方案。
+- `npm config set registry <公司内镜像源>` 公网上当然是用淘宝源、中科大源……
+- `npm config set no-proxy <公司内镜像源>` 公网上则不需要，公司内则必须。因为脚手架执行过程中有一些操作需要通过 proxy 访问外网，所以 shell 的 http_proxy 环境变量必须配置，但下载 npm 镜像源不使用 proxy，所以我将镜像源配置到了 no_proxy 环境变量中 —— 可是，npm 不认这个环境变量，反复折磨了我 2h，终于在 stackoverflow 上看到网友的解决方案：将 no_proxy 配置到 npm 的 config 中。
 
-下面是 yarn(`yarn create tauri-app`) 和 npx(`npx create-tauri-app`) 2 种是用脚手架的方式，阶段是相同的，整体来说 yarn 的成功率会高一些，反复安装的速度也大幅提升，必须首选 yarn，具体对比如下：
+下面是 yarn 和 npx 两种用脚手架的方式对比，运行阶段是相同的，整体来说 yarn 的成功率会高一些，反复安装的速度也大幅提升，必须首选 yarn：
+
+- yarn: `yarn create tauri-app`
+- npm: `npx create-tauri-app`
 
 | 阶段                                                    | 说明                                                   | yarn             | npm                 |
 | ------------------------------------------------------- | ------------------------------------------------------ | ---------------- | ------------------- |
