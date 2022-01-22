@@ -29,19 +29,19 @@ tags:
 - `npm config set registry <公司内 npm 镜像源>` 公网上当然是用淘宝源、中科大源……
 - `npm config set no-proxy <公司内 npm 镜像源>` 公网上则不需要，公司内则必须，因为 npm 访问镜像源不使用 proxy，但后面的 Download Rust CLI 等操作又需要 proxy，但是 npm 又不使用 shell 的 no_proxy 环境变量，所以这个配置太关键了，搞了我至少 2h 才在 stackoverflow 上看到网友的这个解决方案。
 
-下面是 yarn 和 npx 2 种是用脚手架的方式，整体来说 yarn 的成功率会高一些，反复安装的速度也大幅提升，必须首选 yarn，具体对比如下：
+下面是 yarn(`yarn create tauri-app`) 和 npx(`npx create-tauri-app`) 2 种是用脚手架的方式，阶段是相同的，整体来说 yarn 的成功率会高一些，反复安装的速度也大幅提升，必须首选 yarn，具体对比如下：
 
-| 阶段                                                    | 说明                                                   | `yarn create tauri-app` | `npx create-tauri-app` |
-| ------------------------------------------------------- | ------------------------------------------------------ | ----------------------- | ---------------------- |
-| 准备脚手架                                              | Install create-tauri-app@1.0.0-beta.4                  | 正常                    | 正常                   |
-| 交互式配置                                              | app name/title/UI reciped 等                           | 正常                    | 正常                   |
-| `>>Running initial command(s)`                          | 安装 create-vite                                       | 正常                    | 正常                   |
-| `>> Installing any additional`<br>`needed dependencies` | 安装 vue,vite,ts,tauri-apps/cli 直接包及其 370+ 依赖包 | 优秀 [注 1]             | 偶发失败 [注 2]        |
-| `>> Updating "package.json"`                            | 将项目配置写入 package.json                            | 正常                    | 正常                   |
-| `>> Running "tauri init"`                               | 先 Download Rust CLI [注 3]，然后执行初始化[注 4]      | 不用反复下载            | 需要反复下载           |
-| `>> Updating "tauri.conf.json"`                         |                                                        |                         |                        |
-| `>> Running final command(s)`                           | `vue-tsc --noEmit && vite build`                       |                         |                        |
-| 运行                                                    | `cd myproject`                                         | `yarn tauri dev`        | `npm run tauri dev`    |
+| 阶段                                                    | 说明                                                   | yarn             | npm                 |
+| ------------------------------------------------------- | ------------------------------------------------------ | ---------------- | ------------------- |
+| 准备脚手架                                              | Install create-tauri-app@1.0.0-beta.4                  | 正常             | 正常                |
+| 交互式配置                                              | app name/title/UI reciped 等                           | 正常             | 正常                |
+| `>>Running initial command(s)`                          | 安装 create-vite                                       | 正常             | 正常                |
+| `>> Installing any additional`<br>`needed dependencies` | 安装 vue,vite,ts,tauri-apps/cli 直接包及其 370+ 依赖包 | 优秀<br>[注 1]   | 偶发失败<br>[注 2]  |
+| `>> Updating "package.json"`                            | 将项目配置写入 package.json                            | 正常             | 正常                |
+| `>> Running "tauri init"`                               | 先 Download Rust CLI [注 3]，然后执行初始化[注 4]      | 一次下载         | 反复下载            |
+| `>> Updating "tauri.conf.json"`                         |                                                        |                  |                     |
+| `>> Running final command(s)`                           | `vue-tsc --noEmit && vite build`                       |                  |                     |
+| 运行                                                    | `cd myproject`                                         | `yarn tauri dev` | `npm run tauri dev` |
 
 注：
 
