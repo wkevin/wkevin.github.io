@@ -26,15 +26,41 @@ tags:
 
 ### 脚手架创建项目
 
+#### Config
+
 最困难的不过 2 点：
 
 1. 适配公司 Proxy
 2. 适配 github 访问和下载
 
-执行脚手架之前，首先还是要配置 npm 镜像源和 no-proxy 配置项：
+如果不是在公司 Proxy 之后，则忽略 1，否则请仔细对待。yarn 与 npm 有一些差异
 
-- `npm config set registry <公司内镜像源>` 公网上当然是用淘宝源、中科大源……
-- `npm config set no-proxy <公司内镜像源>` 公网上则不需要，公司内则必须。因为脚手架执行过程中有一些操作需要通过 proxy 访问外网，所以 shell 的 http_proxy 环境变量必须配置，但下载 npm 镜像源不使用 proxy，所以我将镜像源配置到了 no_proxy 环境变量中 —— 可是，npm 不认这个环境变量，反复折磨了我 2h，终于在 stackoverflow 上看到网友的解决方案：将 no_proxy 配置到 npm 的 config 中。
+| 配置项     | npm                                  | yarn                  |
+| ---------- | ------------------------------------ | --------------------- |
+| `registry` | `npm config set registry <包服务器>` | 无需配置，使用 npm 的 |
+| `proxy`    | `npm config set proxy <代理服务器>`  | 无需配置，使用 npm 的 |
+| `no-proxy` | `npm config set no-proxy <包服务器>` | 不使用此配置          |
+
+npm 和 yarn 都**不使用 shell 环境变量**，所以 shell 中的 `http-proxy`、`https-proxy`、`no-proxy` 都没有用。
+
+但可以使用 `npm_config_` 为前缀的环境变量，所以可以 `export npm_config_proxy=...`，不过我很少这样。
+
+配置好后检查一下
+
+```sh
+$ npm update
+$ npm config list
+$ yarn config list
+```
+
+特别注意的一点是：如果想同时能够访问公司 Proxy 内的包服务器、和外网的包服务器，则：
+
+- npm 必须同时配置 `proxy` + `no-proxy`：因为 npm 不使用 shell 的 `http_proxy`、`no_http` 等环境变量，所以 npm 自己要把这两个都配进去。
+- yarn 做不到，因为它不使用 `no-proxy`，所以配置了 `proxy` 就只能访问外网的，否则只能内网的，二选一。
+
+另外还需注意：npm 是 `no-proxy`，shell 是 `no_proxy`，一个中划线，一个下划线。
+
+#### Create
 
 下面是 yarn 和 npx 两种用脚手架的方式对比，运行阶段是相同的，整体来说 yarn 的成功率会高一些，反复安装的速度也大幅提升，必须首选 yarn：
 
@@ -107,3 +133,7 @@ Caused by:
 ```
 
 我以为是 `src-tauri/` 下的 Cargo.toml 或 tauri.conf.json 被我修改坏了，反复修改也不行，后来琢磨出来可能不是，去看了一眼 `~/.cargo/config`，原来被我改坏了，哎！
+
+### 补充 2
+
+2022 年 2 月，tauri 从 beta 升级到 1.0.0-rc.1，Download Rust CLI 步骤不再从 github 上下载二进制版本，所以不需要连外网了。
