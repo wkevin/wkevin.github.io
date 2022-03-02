@@ -35,15 +35,30 @@ tags:
 
 如果不是在公司 Proxy 之后，则忽略 1，否则请仔细对待。yarn 与 npm 有一些差异
 
-| 配置项     | npm                                  | yarn                  |
+| npm 配置项 | npm                                  | yarn                  |
 | ---------- | ------------------------------------ | --------------------- |
 | `registry` | `npm config set registry <包服务器>` | 无需配置，使用 npm 的 |
 | `proxy`    | `npm config set proxy <代理服务器>`  | 无需配置，使用 npm 的 |
 | `no-proxy` | `npm config set no-proxy <包服务器>` | 不使用此配置          |
 
-npm 和 yarn 都**不使用 shell 环境变量**，所以 shell 中的 `http-proxy`、`https-proxy`、`no-proxy` 都没有用。
+另外，对于 shell 环境变量，npm 和 yarn 也不同处理
 
-但可以使用 `npm_config_` 为前缀的环境变量，所以可以 `export npm_config_proxy=...`，不过我很少这样。
+| shell 变量                    | npm    | yarn   |
+| ----------------------------- | ------ | ------ |
+| `http-proxy`<br>`https-proxy` | 不使用 | 使用   |
+| `no_proxy`                    | 不使用 | 不使用 |
+| `npm_config_xxx`              | 接受   | 不接受 |
+
+因此，如果与我一样要面对公司 Proxy 内包服务器的情况，则需要小心（头疼）的处理：
+
+| NO. | 目的                         | npm:`proxy` | npm:`no-proxy` | shell:`http[s]-proxy` | shell:`no_proxy` |
+| --- | ---------------------------- | ----------- | -------------- | --------------------- | ---------------- |
+| 1   | npm 仅使用 proxy 内包服务器  | 删除        | 删除           | 无效                  | 无效             |
+| 2   | yarn 仅使用 proxy 内包服务器 | 删除        | 无效           | 删除                  | 删除             |
+| 3   | npm 同时使用内、外包服务器   | 配置        | 配置           | 无效                  | 无效             |
+| 4   | yarn 同时使用内、外包服务器  |             |                |                       |                  |
+
+第 4 种情况，yarn 做不到。另外还需注意：npm 是 `no-proxy`，shell 是 `no_proxy`，一个中划线，一个下划线。
 
 配置好后检查一下
 
@@ -52,13 +67,6 @@ $ npm update
 $ npm config list
 $ yarn config list
 ```
-
-特别注意的一点是：如果想同时能够访问公司 Proxy 内的包服务器、和外网的包服务器，则：
-
-- npm 必须同时配置 `proxy` + `no-proxy`：因为 npm 不使用 shell 的 `http_proxy`、`no_http` 等环境变量，所以 npm 自己要把这两个都配进去。
-- yarn 做不到，因为它不使用 `no-proxy`，所以配置了 `proxy` 就只能访问外网的，否则只能内网的，二选一。
-
-另外还需注意：npm 是 `no-proxy`，shell 是 `no_proxy`，一个中划线，一个下划线。
 
 #### Create
 
