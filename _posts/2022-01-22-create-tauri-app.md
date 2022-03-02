@@ -11,7 +11,7 @@ tags:
 
 ![](/images/posts/2022-01-22-create-tauri-app/icon.png)
 
-一直想用前后端技术栈做个跨平台（Win/Linux/macOS）的 APP，前几年了解过 Electron，到后来一直没有应用场景，就放下了，最近又掌握了一下最新情况：
+一直想用前后端技术栈做个跨平台（Win/Linux/macOS）的 APP，前几年了解过 Electron，到后来始终没有应用场景，就放下了，最近又掌握了一下最新情况：
 
 | 框架     | 前端                       | 后端       |
 | -------- | -------------------------- | ---------- |
@@ -70,7 +70,7 @@ $ yarn config list
 
 #### Create
 
-下面是 yarn 和 npx 两种用脚手架的方式对比，运行阶段是相同的，整体来说 yarn 的成功率会高一些，反复安装的速度也大幅提升，必须首选 yarn：
+下面是 yarn 和 npx 两种用脚手架的方式对比，运行阶段是相同的，整体来说 yarn 的成功率会高一些，反复安装的速度也大幅提升。所以直连外网的话必须首选 yarn，内网安装的话就是面对上面 3 号环境，用 npm 更合适些。
 
 - yarn: `yarn create tauri-app`
 - npm: `npx create-tauri-app`
@@ -144,4 +144,4 @@ Caused by:
 
 ### 补充 2
 
-2022 年 2 月，tauri 从 beta 升级到 1.0.0-rc.1，Download Rust CLI 步骤不再从 github 上下载二进制版本，所以不需要连外网了。
+2022 年 2 月，tauri 从 beta 升级到 1.0.0-rc.1，Download Rust CLI 步骤不再从 github 上下载二进制版本，所以不需要连外网了，进而都首选 yarn 了。
