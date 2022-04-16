@@ -279,7 +279,13 @@ rehypePlugins: [
 ],
 ```
 
-rehype-katex 有 3 种 output：'html' | 'mathml' | 'htmlAndMathml'(默认) —— html 是可 copy 的网页显示，更多的参数打开 rehype-katex 源码看一眼就是了。
+rehype-katex 有 3 种 output：
+
+- 'html' :可 copy 的网页显示
+- 'mathml' : 我们通常理解的很有科学范儿的显示
+- 'htmlAndMathml'(默认) ：两种都显示
+
+更多的参数打开 rehype-katex 源码看一眼就是了。
 
 ### remark 的检查功能
 
@@ -299,9 +305,13 @@ remark 除了编译，还能够像高级语言一样对 markdown 文本进行源
 
 ### 展开组件
 
+<!-- prettier-ignore -->
 ```js
 <details>
-  <summary>Hello World</summary>I like docusaurus!
+  <summary>Hello World</summary>
+  
+  I like docusaurus!
+  
 </details>
 ```
 
@@ -310,14 +320,23 @@ remark 除了编译，还能够像高级语言一样对 markdown 文本进行源
 ### 为代码段添加标题
 
 <pre><code>
-  ```js title="docusaurus.config.js"<br/>
-  const math = require("remark-math");<br/>
-  const katex = require("rehype-katex");<br/>
-  ```
+```js title="docusaurus.config.js"<br/>
+const math = require("remark-math");<br/>
+const katex = require("rehype-katex");<br/>
+```
 </code></pre>
 
 这样写可以得到一个带标题的代码块。
 
-OK！
+### 不想让代码段被 Prettier 修改
 
-玩的高兴！
+整篇文章默认当然是 Prettier 做 formatter，但有些段落临时不想让 Prettier 生效，怎么办？
+
+```
+<!-- prettier-ignore -->
+// 自己的代码段
+```
+
+这是配置 Prettier 了，本质上和 Docusaurus 无关。
+
+OK！哪天有空把我当前这个 blog 也改用 Docusaurus，或者 VUEPress。
