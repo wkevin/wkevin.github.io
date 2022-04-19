@@ -26,39 +26,38 @@ tags:
 
 ### 脚手架创建项目
 
-#### Config
+#### npm/yarn 准备
 
-最困难的不过 2 点：
+如果不是在公司 Proxy 之后，则忽略本段，设置好淘宝的 npm 镜像即可，我是在公司 Proxy 之后折腾的，并且 yarn 与 npm 还有一些差异，所以特别记录一下。
 
-1. 适配公司 Proxy
-2. 适配 github 访问和下载
+因为早期(`<1.0.0-beta8`)的 tauri 在运行脚手架时需要从 github 上下载东西，所以我需要处理同时：“通过 proxy 访问 github” + “公司内包服务器下载 npm 包”的情形。
 
-如果不是在公司 Proxy 之后，则忽略 1，否则请仔细对待。yarn 与 npm 有一些差异
+> 注：1.0.0-rc 后就不需要从 github 上下载了，一下轻松很多。
 
 | npm 配置项 | npm                                  | yarn                  |
 | ---------- | ------------------------------------ | --------------------- |
-| `registry` | `npm config set registry <包服务器>` | 无需配置，使用 npm 的 |
-| `proxy`    | `npm config set proxy <代理服务器>`  | 无需配置，使用 npm 的 |
-| `no-proxy` | `npm config set no-proxy <包服务器>` | 不使用此配置          |
+| `registry` | `npm config set registry <包服务器>` | 使用 npm 的           |
+| `proxy`    | `npm config set proxy <代理服务器>`  | 使用 npm 的           |
+| `noproxy`  | `npm config set noproxy <包服务器>`  | **不使用 npm 此配置** |
+
+[npm 的 config 详细文档](https://docs.npmjs.com/cli/v8/using-npm/config) 中有 registry、proxy、noproxy 等所有配置项的说明。
 
 另外，对于 shell 环境变量，npm 和 yarn 也不同处理
 
-| shell 变量                    | npm    | yarn   |
-| ----------------------------- | ------ | ------ |
-| `http-proxy`<br>`https-proxy` | 不使用 | 使用   |
-| `no_proxy`                    | 不使用 | 不使用 |
-| `npm_config_xxx`              | 接受   | 不接受 |
+| shell 变量                     | npm    | yarn   |
+| ------------------------------ | ------ | ------ |
+| `http-proxy`<br/>`https-proxy` | 不使用 | 使用   |
+| `no_proxy`                     | 不使用 | 不使用 |
+| `npm_config_xxx`               | 接受   | 不接受 |
 
-因此，如果与我一样要面对公司 Proxy 内包服务器的情况，则需要小心（头疼）的处理：
+因此，总结一下在公司内网安装的最佳方案：
 
-| NO. | 目的                         | npm:`proxy` | npm:`no-proxy` | shell:`http[s]-proxy` | shell:`no_proxy` |
-| --- | ---------------------------- | ----------- | -------------- | --------------------- | ---------------- |
-| 1   | npm 仅使用 proxy 内包服务器  | 删除        | 删除           | 无效                  | 无效             |
-| 2   | yarn 仅使用 proxy 内包服务器 | 删除        | 无效           | 删除                  | 删除             |
-| 3   | npm 同时使用内、外包服务器   | 配置        | 配置           | 无效                  | 无效             |
-| 4   | yarn 同时使用内、外包服务器  |             |                |                       |                  |
-
-第 4 种情况，yarn 做不到。另外还需注意：npm 是 `no-proxy`，shell 是 `no_proxy`，一个中划线，一个下划线。
+| 目的                | `proxy`                   | `noproxy`          |
+| ------------------- | ------------------------- | ------------------ |
+| 内网包服务器 + npm  | 可以配，别配错就行        | 可以配，别配错就行 |
+| 内网包服务器 + yarn | `npm config delete proxy` | 无效               |
+| 外网包服务器 + npm  | 必须正确配置              | 必须正确配置       |
+| 外网包服务器 + yarn | 使用 npm 配置             | 无效               |
 
 配置好后检查一下
 
