@@ -5,3 +5,13 @@ Gemfile
 Gemfile.lock
 temp
 .vim.*
+
+yarn-error.log
+build
+coverage
+.docusaurus
+.cache-loader
+types
+test-website
+test-website-in-workspace
+node_modules

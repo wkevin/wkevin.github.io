@@ -1,0 +1,92 @@
+---
+title: 修订 Feedly 不能显示网站图标
+date: 2019-09-11 20:18:52 +0800
+description: Feedly 近段时间升级，导致网站图标在墙内不能正常显示，如何解决
+authors: wKevin
+categories:
+  - it
+tags:
+  - feedly
+  - gooreplacer
+---
+
+Feedly 前段时间升级，侧边栏做了修订，新增了 Dark 模式（但还是欠火候，对比度太晃眼，达不到 IDE 的水平，要有点灰度才显得高级）。
+
+添加 Feed、Dark 模式、Support 3 个图标单独搞了个侧边栏 —— 这么占地方，不是很喜欢。
+
+此次修订同时修改了网站获取图标的方式，以前一直能够正确的获取，效果是这样的：
+
+![](./images/good.png)
+
+<!--truncate-->
+
+但升级后成了这样：不但不显示图标，还多占了一行。
+
+![](./images/bad.png)
+
+本来想忍忍看，Feedly 能不能自己修订，等了个把月了，没变化 —— 失望！
+
+解决措施：
+
+用 gooreplacer 的 Online-rules，导入我写好的规则（地址：`https://raw.githubusercontent.com/wkevin/configs/master/gooreplacer/gooreplacer.gson`）
+
+![](./images/gooreplacer.png)
+
+---
+
+分割线
+
+**解题思路：**
+
+打开浏览器的 debug 工具，看到所有 icon 都是从 google 获取的，比如：
+
+http://www.google.com/s2/favicons?domain=www.baidu.com 可以获取 baidu 网站的图标。
+
+搜索“favicon api”后找到几个：
+
+- 国外：
+  - `http://www.google.com/s2/favicons?domain=[www.domain.com]`
+  - `http://getfavicon.appspot.com/http://[www.domain.com]`
+  - `http://grabicon.com/[www.domain.com]`
+  - `http://www.getfavicon.org/?url=[www.domain.com]`
+  - `http://g.etfv.co/[www.domain.com]`
+- 国内：
+  - 酷猫：`https://ico.kucat.cn/get.php?url=[www.domain.com]`
+  - 国内最大 DNS 提供商（dnspod）：`http://statics.dnspod.cn/proxy_favicon/_/favicon?domain=[www.domain.com]`
+  - 网友([Jerry Bendy](https://github.com/jerrybendy))自制网站 BYI_API: `http://api.byi.pw/favicon?url=[www.domain.com]`
+
+试用发现，国外的全挂，国内 OK 对比一下(可以点击跳转过去看一下)：
+
+- baidu:
+  - [`https://ico.kucat.cn/get.php?url=www.baidu.com`](https://ico.kucat.cn/get.php?url=www.baidu.com) —— OK（大图）
+  - [`http://statics.dnspod.cn/proxy_favicon/_/favicon?domain=www.baidu.com`](http://statics.dnspod.cn/proxy_favicon/_/favicon?domain=www.baidu.com) —— OK（中图）
+  - [`http://api.byi.pw/favicon?url=www.baidu.com`](http://api.byi.pw/favicon?url=www.baidu.com) —— OK（小图）
+- weibo
+  - [`https://ico.kucat.cn/get.php?url=weibo.com`](https://ico.kucat.cn/get.php?url=weibo.com) —— OK
+  - [`http://statics.dnspod.cn/proxy_favicon/_/favicon?domain=weibo.com`](http://statics.dnspod.cn/proxy_favicon/_/favicon?domain=weibo.com) —— Error
+  - [`http://api.byi.pw/favicon?url=weibo.com`](http://api.byi.pw/favicon?url=weibo.com) —— OK
+- twitter
+  - [`https://ico.kucat.cn/get.php?url=twitter.com`](https://ico.kucat.cn/get.php?url=twitter.com) —— Error
+  - [`http://statics.dnspod.cn/proxy_favicon/_/favicon?domain=twitter.com`](http://statics.dnspod.cn/proxy_favicon/_/favicon?domain=twitter.com) —— Error
+  - [`http://api.byi.pw/favicon?url=twitter.com`](http://api.byi.pw/favicon?url=twitter.com) —— OK
+
+酷猫和 DNSPod 胆子小，违禁图标不敢放；DNSPod 更是小气，很多图标不抓取；只能用网友自制的了，希望命长些。
+
+OK，下面开始解决：
+
+首选使用浏览器的 gooreplacer 插件（可参考我的另一篇 blog： [告别等待，秒开网站](https://wkevin.github.io/it/speed.net/) ）加上如下规则：
+
+```
+    {
+      "src": "www.google.com/s2/favicons\\?domain=(.*)(&alt=feed)",
+      "kind": "regexp",
+      "dst": "api.byi.pw/favicon?url=$1",
+      "enable": true
+    },
+```
+
+正则表达式的规则中要特殊处理`?`问号，如果写单条规则 `\?`即可，写入 gson 规则文件，则需要 `\\?`。
+
+或者直接导入我写好的规则（地址：`https://raw.githubusercontent.com/wkevin/configs/master/gooreplacer/gooreplacer.gson`）。
+
+图标即可正常加载了。

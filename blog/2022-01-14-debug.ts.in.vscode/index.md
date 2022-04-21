@@ -1,0 +1,102 @@
+---
+title: 5 分钟搭建 TypeScript 的 VSCode 调试环境
+date: 2022-01-14 18:29:59 +0800
+authors: wKevin
+categories:
+  - it
+tags:
+  - typescript
+  - vscode
+---
+
+![](./images/0fcca426bcc7467a5dcf922fad827a66.jpeg)
+
+<!--truncate-->
+
+## 搭建基础环境 & 运行 ts/js
+
+```sh
+mkdir ts-demo
+cd ts-demo
+npm init -y
+```
+
+创建 package.json，其中的 name = 文件夹名(ts-demo)，所以文件夹名称不能是 typescript，否则下面没法安装。
+
+```sh
+npm i typescript
+./node_modules/.bin/tsc -V # tsc: typescript compiler 编译器
+./node_modules/.bin/tsc -init # 创建 tsconfig.json
+```
+
+利用 tsc 编译器创建一个默认的 tsconfig.json，里面的配置基本不用动，但如果想单步 debug，则需要适当修改`"sourceMap": true`（具体看下文）。
+
+```sh
+echo 'console.log("hello world")' > foobar.ts # 创建并编辑 ts 文件
+./node_modules/.bin/tsc foobar.ts # 生成 js
+```
+
+有 2 种运行方式：
+
+1. 浏览器上执行（浏览器打开后 F12 -- console）
+
+```sh
+echo '<script src="foobar.js"></script>' > index.html
+firefox index.html
+```
+
+2. node 本地执行
+
+```sh
+node foobar.js
+```
+
+## VSCode 调试
+
+### tsconfig.json 设置 sourceMap
+
+```
+"sourceMap": true
+"outDir": "./_dist"
+```
+
+- sourceMap：这样才能 debug 映射代码到 ts 的行。
+- outDir：可选，可配置成任意喜欢的样子，但下面 program 要对应配置。
+
+### Build（Ctrl-Shift-B）& tasks.json
+
+- [下载](https://go.microsoft.com/fwlink/?LinkId=733558) tasks.json 模板，如下，基本不用修改直接就能用。
+
+```json
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "problemMatcher": ["$tsc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
+```
+
+然后从 `F1 -- Tasks: Build` 或 `Ctrl-Shift-B` 都可以启动 build，生成 js 文件。
+
+### Debug（F5）& launch.json
+
+- 创建 `.vscode/launch.json`
+- `Add Configuration` 按钮，选中 `nodejs: Launch Program` 添加模板
+- 修改或添加一些项目，如：
+  - `"program": "${workspaceFolder}/_dist/${fileBasenameNoExtension}.js",`
+  - `"preLaunchTask": "${defaultBuildTask}"` —— 这样修改了 ts 后 F5 会自动 build
+  - `"console": "integratedTerminal"` —— debug 信息打印到 vscode 集成的终端中。
+
+然后就可以在 ts 中加断点，然后 F5 单步调试了。
+
+![](./images/launch.json.png)
