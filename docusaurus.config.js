@@ -1,9 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-const math = require("remark-math");
+const lightCodeTheme = require("prism-react-renderer/themes/github")
+const darkCodeTheme = require("prism-react-renderer/themes/dracula")
+const math = require("remark-math")
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -15,6 +15,7 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/logo.svg",
   organizationName: "wkevin", // Usually your GitHub org/user name.
+  deploymentBranch: "gh-pages", //Defaults to 'gh-pages'
   projectName: "wkevin.github.io", // Usually your repo name.
   plugins: [
     [
@@ -193,12 +194,12 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-};
+}
 
 async function createConfig() {
-  const katex = (await import("rehype-katex")).default;
-  config.presets[0][1].docs.rehypePlugins.push(katex);
-  config.presets[0][1].blog.rehypePlugins.push(katex);
-  return config;
+  const katex = (await import("rehype-katex")).default
+  config.presets[0][1].docs.rehypePlugins.push(katex)
+  config.presets[0][1].blog.rehypePlugins.push(katex)
+  return config
 }
-module.exports = createConfig;
+module.exports = createConfig
