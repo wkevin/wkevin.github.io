@@ -12,7 +12,7 @@
             "summary": "今天把 Blog 从 Jekyll 转到 Docusaurus 了，仍是部署到 github，部署过程记录一下。",
             "date_modified": "2022-04-21T00:00:00.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -29,7 +29,7 @@
             "summary": "最近学习使用 Midway 和 Tauri，忽然对网站是怎么做出来的来了兴趣，尤其是“侧边栏和 ToC 分列左右”特别喜欢，我多年来一直使用的 Docsify 总是 ToC 混入侧边栏，让我总有些别扭。",
             "date_modified": "2022-04-15T00:00:00.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -46,7 +46,7 @@
             "summary": " ",
             "date_modified": "2022-01-22T19:21:43.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -61,7 +61,7 @@
             "summary": "通过镜像访问 github",
             "date_modified": "2022-01-15T10:35:55.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -76,7 +76,7 @@
             "summary": "搭建基础环境 & 运行 ts/js",
             "date_modified": "2022-01-14T18:29:59.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -92,7 +92,7 @@
             "summary": " ",
             "date_modified": "2021-09-19T15:52:51.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -107,7 +107,7 @@
             "summary": " ",
             "date_modified": "2021-09-14T18:17:10.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -122,7 +122,7 @@
             "summary": " ",
             "date_modified": "2021-08-21T16:10:22.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -141,7 +141,7 @@
             "summary": " ",
             "date_modified": "2021-05-19T16:35:15.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -159,7 +159,7 @@
             "summary": " ",
             "date_modified": "2021-04-14T19:18:38.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -174,7 +174,7 @@
             "summary": " ",
             "date_modified": "2021-02-10T15:17:16.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -190,7 +190,7 @@
             "summary": " ",
             "date_modified": "2021-01-17T18:45:38.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -206,7 +206,7 @@
             "summary": " ",
             "date_modified": "2021-01-03T12:06:47.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -221,7 +221,7 @@
             "summary": " ",
             "date_modified": "2020-12-17T18:29:24.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -236,7 +236,7 @@
             "summary": " ",
             "date_modified": "2020-12-09T20:42:09.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -252,7 +252,7 @@
             "summary": "nvm 的使用要点",
             "date_modified": "2020-11-08T15:04:26.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -269,7 +269,7 @@
             "summary": " ",
             "date_modified": "2020-10-31T14:54:42.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -285,7 +285,7 @@
             "summary": " ",
             "date_modified": "2020-10-28T09:45:18.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -302,7 +302,7 @@
             "summary": " ",
             "date_modified": "2020-05-22T14:18:07.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -317,7 +317,7 @@
             "summary": " ",
             "date_modified": "2020-05-21T14:55:23.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -332,7 +332,7 @@
             "summary": "RISV-V 相关知识图谱快速扫描",
             "date_modified": "2020-03-14T18:49:37.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -349,7 +349,7 @@
             "summary": " ",
             "date_modified": "2019-11-30T22:11:47.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -364,7 +364,7 @@
             "summary": "我的管理理念",
             "date_modified": "2019-11-19T21:54:35.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -379,7 +379,7 @@
             "summary": " ",
             "date_modified": "2019-11-09T11:39:15.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -396,7 +396,7 @@
             "summary": " ",
             "date_modified": "2019-11-04T11:03:36.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -412,7 +412,7 @@
             "summary": "近些年敏捷书籍的Timeline",
             "date_modified": "2019-09-20T23:38:21.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -428,7 +428,7 @@
             "summary": " ",
             "date_modified": "2019-09-19T14:35:45.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -444,7 +444,7 @@
             "summary": "shell 变量分哪几种，及上述几个命令是如何操作的",
             "date_modified": "2019-09-17T15:20:39.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -460,7 +460,7 @@
             "summary": "Feedly 近段时间升级，导致网站图标在墙内不能正常显示，如何解决",
             "date_modified": "2019-09-11T20:18:52.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -476,7 +476,7 @@
             "summary": " ",
             "date_modified": "2019-06-24T09:03:23.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -492,7 +492,7 @@
             "summary": " ",
             "date_modified": "2019-05-30T18:11:02.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -509,7 +509,7 @@
             "summary": " ",
             "date_modified": "2019-05-28T17:23:15.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -527,7 +527,7 @@
             "summary": " ",
             "date_modified": "2019-05-22T10:02:15.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -543,7 +543,7 @@
             "summary": " ",
             "date_modified": "2019-04-17T17:06:09.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -558,7 +558,7 @@
             "summary": " ",
             "date_modified": "2019-04-10T09:09:03.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -574,7 +574,7 @@
             "summary": "最近试用了几款阅读APP，比较一下",
             "date_modified": "2019-03-19T23:23:05.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -592,7 +592,7 @@
             "summary": " ",
             "date_modified": "2019-03-10T23:10:38.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -607,7 +607,7 @@
             "summary": " ",
             "date_modified": "2019-03-07T18:10:07.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -622,7 +622,7 @@
             "summary": "2018.12.31 深圳春茧 倒数第17场时间的朋友",
             "date_modified": "2019-01-01T10:32:09.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -640,7 +640,7 @@
             "summary": "jupyter nbextensions",
             "date_modified": "2018-12-29T21:29:54.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -655,7 +655,7 @@
             "summary": " ",
             "date_modified": "2018-12-28T14:50:19.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -674,7 +674,7 @@
             "summary": "运行可执行程序或加载动态库时找不到依赖库的解决办法",
             "date_modified": "2018-12-24T18:16:04.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -690,7 +690,7 @@
             "summary": "Github 个人 Rss 种子",
             "date_modified": "2018-12-18T14:36:17.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -705,7 +705,7 @@
             "summary": " ",
             "date_modified": "2018-12-17T14:28:02.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -720,7 +720,7 @@
             "summary": " ",
             "date_modified": "2018-12-14T15:08:53.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -736,7 +736,7 @@
             "summary": "偷得半日闲",
             "date_modified": "2018-12-14T10:16:44.000Z",
             "author": {
-                "name": "Kevin Wang",
+                "name": "wKevin",
                 "url": "http://wkevin.github.io/"
             },
             "tags": [
@@ -751,6 +751,10 @@
             "title": "告别等待，秒开网站",
             "summary": "摘要：",
             "date_modified": "2018-06-26T10:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "cdn",
                 "dns"
@@ -763,6 +767,10 @@
             "title": "Python IDE 常用功能及快捷键对比",
             "summary": "| 使用频率 | 动作                                                                           | Pycharm                                                                                 | Wing | VSCode                                                              | jupyter notebook                                                               |",
             "date_modified": "2018-06-14T10:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "Python",
                 "PyCharm",
@@ -777,6 +785,10 @@
             "title": "思源黑体 and 思源宋体",
             "summary": "Google 与 Adobe 合作，为亚洲日、韩、中简、中繁四种预研创造了两种字体：思源黑体和思源宋体，覆盖 15 亿人群，功德无量。",
             "date_modified": "2017-05-06T10:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "思源"
             ]
@@ -788,6 +800,10 @@
             "title": "工业4.0、自动化展会推荐列表",
             "summary": "| 主办                               | 展会                                                                                                                | 日期          | 城市     | 展馆               | 展览面积       | 参展商       | 观众           | 推荐 |",
             "date_modified": "2017-04-13T10:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "展会"
             ]
@@ -799,6 +815,10 @@
             "title": "CITE 2017 第五届中国电子信息博览会",
             "summary": "中国电子信息博览会，China Information Technology Expo，先多看几眼这个名字，电子信息这个称呼仿佛一下回到了 N 年前，以前很多学校还有电子信息专业，尤其是几个电子科大，但这个专业显得有些面太大、太笼统，跟我学的物理似得，学完好像啥都能干，又啥都不精。当下几年讲的多的是工匠精神，追去的是在某一领域钻研，所以自动化展、光博会、工业 4.0 展……让人望文生义。相比之下，电子信息博览会名字就笼统一下。",
             "date_modified": "2017-04-09T10:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "CITE",
                 "展会"
@@ -811,6 +831,10 @@
             "title": "国际展览会联盟（UFI）",
             "summary": "国际性的展会联盟有： AUMA, FKM, GDG, UFI, and CEFA",
             "date_modified": "2017-04-08T11:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "UFI",
                 "展会"
@@ -823,6 +847,10 @@
             "title": "中国特色展系",
             "summary": "在中国，数得上的大型展会都是商务部指导、市政府牵头办起来的，尚没有像“汉诺威展览公司”、“法兰克福展览有限公司”、“慕尼黑国际博览集团”这样独立运作的公司来办展会，这是中国特色，所以本文标题叫做：中国特色展系。",
             "date_modified": "2017-04-08T10:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "中国",
                 "展会"
@@ -835,6 +863,10 @@
             "title": "慕尼黑展系(Messe Muenchen)",
             "summary": "Messe Muenchen 简称 MM，LOGO：",
             "date_modified": "2017-04-08T01:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "慕尼黑",
                 "展会"
@@ -847,6 +879,10 @@
             "title": "法兰克福展系(Messe Frankfurt)",
             "summary": "德国有两个法兰克福（Frankfurt），东西部各一个：",
             "date_modified": "2017-04-06T10:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "法兰克福",
                 "展会"
@@ -859,6 +895,10 @@
             "title": "汉诺威展系(Hannover Messe)",
             "summary": "工业和自动化的展会的故事，必须要从德国说起。",
             "date_modified": "2017-04-03T10:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "汉诺威",
                 "展会"
@@ -871,6 +911,10 @@
             "title": "How Google Works 读书笔记",
             "summary": "书不厚，三百页，去掉注释才二百多，专心看一天能读完。",
             "date_modified": "2016-01-08T10:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "Google"
             ]
@@ -882,6 +926,10 @@
             "title": "说话和书写中的方法论",
             "summary": "如果在电梯里遇到领导，问你某某项目进展如何，你给来了一段相声，估计你就二了。",
             "date_modified": "2015-10-08T10:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "金字塔"
             ]
@@ -893,6 +941,10 @@
             "title": "用写代码的方式写文档",
             "summary": "摘要",
             "date_modified": "2015-09-01T10:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "markdown",
                 "workflow"
@@ -905,6 +957,10 @@
             "title": "仪器通讯接口简史",
             "summary": "1960`，个人电脑还只在科幻书籍中的年代，当年的惠普主营业务还是电气领域。",
             "date_modified": "2015-02-14T10:16:00.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "VISA",
                 "SCPI",
@@ -918,6 +974,10 @@
             "title": "敏捷 vs 精益；Scrum vs 看板方法",
             "summary": "David Aderson（戴维 安德森），这哥们1956年生，在Moto、Microsoft等几家公司工作过，尤其在微软期间，学习了在当年来说刚刚起步的“敏捷”，心向往之，写了一本《软件工程的敏捷管理》。不过不久后的一天，他学习了丰田的精益，又仔细观察了公园发入园卡来控制流量（类似停车场发停车卡来控制流量），然后改弦易张，闭门自创武功，搞出个：Kanban Methon（看板方法）。",
             "date_modified": "2015-01-20T22:53:39.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "Agile",
                 "TPS",
@@ -932,6 +992,10 @@
             "title": "双月湾-功课与游记",
             "summary": "目的地",
             "date_modified": "2014-06-24T22:38:39.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "旅游",
                 "沙滩"
@@ -944,6 +1008,10 @@
             "title": "git submodule 的重命名",
             "summary": "git help submodule 文档中找不到如何 mv 一个已有的 submodule，stackoverflow上可以搜到很多这个问题的解决办法，大多和本文的内容一样，晦涩而繁杂，没办法，好像没有完美而简洁的办法。",
             "date_modified": "2014-05-20T00:45:23.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "git",
                 "submodule"
@@ -956,6 +1024,10 @@
             "title": "Sublime Text",
             "summary": "ST3 比 ST2 加强了 project 的功能，如“F12 - 跳转到定义”，使得ST更像个IDE了。",
             "date_modified": "2014-05-12T16:55:40.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "sublime"
             ]
@@ -967,6 +1039,10 @@
             "title": "git submodule 操作",
             "summary": "常规操作",
             "date_modified": "2014-05-05T13:59:46.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "git",
                 "submodule"
@@ -979,6 +1055,10 @@
             "title": "Free software licenses",
             "summary": "转载：",
             "date_modified": "2014-05-04T20:55:09.000Z",
+            "author": {
+                "name": "wKevin",
+                "url": "http://wkevin.github.io/"
+            },
             "tags": [
                 "license"
             ]
