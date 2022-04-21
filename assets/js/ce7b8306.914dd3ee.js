@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[5733],{68025:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"netboot","count":1,"permalink":"/blog/tags/netboot"}')}}]);
