@@ -2,12 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wkevin.github.io/blog</id>
     <title>wkevin Blog</title>
-    <updated>2022-04-15T00:00:00.000Z</updated>
+    <updated>2022-04-21T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wkevin.github.io/blog"/>
     <subtitle>wkevin Blog</subtitle>
     <icon>https://wkevin.github.io/img/logo.svg</icon>
     <rights>Copyright © 2022 wkevin</rights>
+    <entry>
+        <title type="html"><![CDATA[github pages 部署 docusaurus]]></title>
+        <id>/2022/04/21/docusaurus.deploy.github</id>
+        <link href="https://wkevin.github.io/blog/2022/04/21/docusaurus.deploy.github"/>
+        <updated>2022-04-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[今天把 Blog 从 Jekyll 转到 Docusaurus 了，仍是部署到 github，部署过程记录一下。]]></summary>
+        <content type="html"><![CDATA[<p>今天把 Blog 从 Jekyll 转到 Docusaurus 了，仍是部署到 github，部署过程记录一下。</p><p>部署大体可以有这么几种方案：</p><div></div><p>方案 1：本地编译 gh-pages 分支，并上传，Github Pages 配置到 gh-pages 分支的 <code>build/</code> 目录上。</p><p>方案 2：使用 <code>yarn deploy</code> 整合命令，自动上传到 gh-pages 分支上，该分支仅包含 build 下内容，所以 Github Pages 配置到 gh-pages 分支的 <code>/</code> 根目录。</p><p>方案 3：使用 Github Actions（或类似 Travis CI 竞品），需要写 Actions 的 workflow 和 job，Docusaurus 已经<a href="https://docusaurus.io/docs/deployment#triggering-deployment-with-github-actions" target="_blank" rel="noopener noreferrer">写好了一份</a>，复制到 <code>.github/workflows/</code> 即可。</p><p>官方写了 2 个 workflow 的例子：</p><ul><li><code>.github/workflows/test-deploy.yml</code>：指定分支有 PR 时触发，仅测试能否 build 成功。</li><li><code>.github/workflows/deploy.yml</code>：指定分支 push 时触发，表示 PR 已经被 review 通过，执行 build、和另一个 Github Action，用通用账号部署到个人的 repo 中的指定分支（一般就是 gh-pages）中。</li></ul><p>方案 1 全手工没必要，方案 2 要废自己电脑的算力来 build，推荐方案 3，免费撸 MS 的羊毛，如果每次 pull 的时候只拉取 main 分支 <code>git pull origin main</code>，不拉取 gh-pages 分支，那样连本机磁盘都不占用了。</p>]]></content>
+        <author>
+            <name>Kevin Wang</name>
+            <uri>http://wkevin.github.io/</uri>
+        </author>
+        <category label="docusaurus" term="docusaurus"/>
+        <category label="deploy" term="deploy"/>
+        <category label="github" term="github"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Docusaurus Tips]]></title>
         <id>/2022/04/15/docusaurus</id>
