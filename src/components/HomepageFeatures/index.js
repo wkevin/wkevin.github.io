@@ -6,29 +6,17 @@ const FeatureList = [
   {
     title: "智能制造",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    description: (
-      <>
-        <li>稳定：保证健壮性、可维护性、和方便的故障定位、Log信息等</li>
-      </>
-    ),
+    description: <></>,
   },
   {
     title: "IoT",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    description: (
-      <>
-        <li>开放：打破产品、部门、科室、团队之间的壁垒，协同工作</li>
-      </>
-    ),
+    description: <></>,
   },
   {
     title: "AR/XR",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    description: (
-      <>
-        <li>开放：打破产品、部门、科室、团队之间的壁垒，协同工作</li>
-      </>
-    ),
+    description: <></>,
   },
 ];
 
