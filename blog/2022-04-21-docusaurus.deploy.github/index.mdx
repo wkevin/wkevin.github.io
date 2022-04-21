@@ -1,0 +1,71 @@
+---
+title: github pages 部署 docusaurus
+authors: wKevin
+tags:
+  - docusaurus
+  - deploy
+  - github
+---
+
+今天把 Blog 从 Jekyll 转到 Docusaurus 了，仍是部署到 github，部署过程记录一下。
+
+部署大体可以有这么几种方案：
+
+```mermaid
+flowchart LR
+    1(本地操作)
+    2([github 操作])
+    1 --- 2
+
+    branch("切换并merge pg-pages 分支\ngit co pg-pages\ngit merge main")
+    build("本地编译\nnpm run build")
+    pushgh("push gh-pages 分支\ngit push origin gh-pages")
+    方案1 --> branch
+    branch --> build
+    build --> pushgh
+
+    deploy("yarn deploy\nnpm run deploy")
+    方案2 --> deploy
+    deploy --> _build
+
+    subgraph yarn deploy
+    _build("本地编译\nnpm run build")
+    test("本地启server测试\nnpm run server")
+    pr("上传到 gh_page 分支\ngit clone --depth 1 --branch gh-pages ... /var/...\n将/var/... 初始化为 git 库及 gh-pages 分支\ngit remote add origin ...\ngit add --all\ngit commit\nCreate PR to gh_page")
+
+    _build --> test
+    test --> pr
+    end
+
+    pushmain("push main 分支\ngit push origin main")
+    github(["Github"])
+    action(["Github Actions\n.github/workflows/xxx.yml"])
+
+    方案3 --> pushmain
+    pushmain --> github
+    github --> action
+
+    ghpages[("github repo\ngh-pages 分支")]
+    pushgh -->|./| ghpages
+    pr -->|./build/| ghpages
+    action -->|./build/| ghpages
+
+    gp[[Github Pages]]
+    ghpages --- gp
+
+```
+
+<!--truncate-->
+
+方案 1：本地编译 gh-pages 分支，并上传，Github Pages 配置到 gh-pages 分支的 `build/` 目录上。
+
+方案 2：使用 `yarn deploy` 整合命令，自动上传到 gh-pages 分支上，该分支仅包含 build 下内容，所以 Github Pages 配置到 gh-pages 分支的 `/` 根目录。
+
+方案 3：使用 Github Actions（或类似 Travis CI 竞品），需要写 Actions 的 workflow 和 job，Docusaurus 已经[写好了一份](https://docusaurus.io/docs/deployment#triggering-deployment-with-github-actions)，复制到 `.github/workflows/` 即可。
+
+官方写了 2 个 workflow 的例子：
+
+- `.github/workflows/test-deploy.yml`：指定分支有 PR 时触发，仅测试能否 build 成功。
+- `.github/workflows/deploy.yml`：指定分支 push 时触发，表示 PR 已经被 review 通过，执行 build、和另一个 Github Action，用通用账号部署到个人的 repo 中的指定分支（一般就是 gh-pages）中。
+
+方案 1 全手工没必要，方案 2 要废自己电脑的算力来 build，推荐方案 3，免费撸 MS 的羊毛，如果每次 pull 的时候只拉取 main 分支 `git pull origin main`，不拉取 gh-pages 分支，那样连本机磁盘都不占用了。

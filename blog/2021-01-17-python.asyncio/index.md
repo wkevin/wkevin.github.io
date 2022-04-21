@@ -1,0 +1,234 @@
+---
+title: python asyncio 协程库一页纸说明
+date: 2021-01-17 18:45:38 +0800
+description: " "
+authors: wKevin
+categories:
+  - it
+tags:
+  - python
+  - asyncio
+---
+
+asyncio 是 python 力推多年的携程库，与其 线程库 相得益彰，更轻量，并且协程可以访问同一进程中的变量，不需要进程间通信来传递数据，所以使用起来非常顺手。
+
+asyncio 官方文档写的非常简练和有效，半小时内可以学习和测试完，下面为我的一段 HelloWrold，感觉可以更快速的帮你认识 **协程**。
+
+<!--truncate-->
+
+## 定义协程
+
+```python
+import asyncio
+import time
+
+
+async def say_after(delay, what):
+    await asyncio.sleep(delay)
+    print(what)
+
+```
+
+async 关键字用来声明一个协程函数，这种函数不能直接调用，会抛出异常。正确的调用姿势有：
+
+1. `await 协程()`
+2. `await asyncio.gather(协程1()， 协程2())`
+3. `await asyncio.waite([协程1()， 协程2()])`
+4. `asyncio.create_task(协程())`
+
+## await 阻塞式调用协程
+
+先来测试前 3 种 await 的方式：
+
+```python
+
+async def main1():
+    # 直接 await，顺序执行
+    await say_after(2, "2s")
+    await say_after(1, "1s")
+
+
+async def main2():
+    # 使用 gather，并发执行
+    await asyncio.gather(say_after(2, "2s"), say_after(1, "1s"))
+
+
+async def main3():
+    # 使用 wait，简单等待
+    # 3.8 版后已废弃: 如果 aws 中的某个可等待对象为协程，它将自动作为任务加入日程。直接向 wait() 传入协程对象已弃用，因为这会导致 令人迷惑的行为。
+    # 3.10 版后移除
+    await asyncio.wait([say_after(2, "2s"), say_after(1, "1s")])
+```
+
+python 规定： 调用协程可以用 await，但 await 必须在另一个协程中 —— 这不死循环了？不会的，asyncio 提供了多个能够最初调用协程的入口：
+
+1. `asyncio.get_event_loop().run_until_complete(协程)` ： 这种方式背后使用了 asyncio 底层的对象：线程池 loop，loop 可以反复利用。
+2. `asyncio.run(协程)`：run 函数是 python 3.7 后新增的，是对 loop 的封装，但每次会对 loop.close()，所以反复使用会性能受影响，文档里也说适合做总入口。
+
+封装一个计算时间的函数，然后把 2 种方式都试一下：
+
+```python
+def runtime(entry, func):
+    print("-" * 10 + func.__name__)
+    start = time.perf_counter()
+    entry(func())
+    print("=" * 10 + "{:.5f}".format(time.perf_counter() - start))
+
+print("########### 用 loop 入口协程 ###########")
+
+loop = asyncio.get_event_loop()
+runtime(loop.run_until_complete, main1)
+runtime(loop.run_until_complete, main2)
+runtime(loop.run_until_complete, main3)
+loop.close()
+
+print("########### 用 run 入口协程 ###########")
+
+runtime(asyncio.run, main1)
+runtime(asyncio.run, main2)
+runtime(asyncio.run, main3)
+```
+
+运行结果：
+
+```bash
+########### 用 loop 入口协程 ###########
+----------main1
+2s
+1s
+==========3.00923
+----------main2
+1s
+2s
+==========2.00600
+----------main3
+1s
+2s
+==========2.00612
+########### 用 run 入口协程 ###########
+----------main1
+2s
+1s
+==========3.01193
+----------main2
+1s
+2s
+==========2.00681
+----------main3
+1s
+2s
+==========2.00592
+```
+
+可见，2 种协程入口调用方式差别不大
+
+下面，需要明确 2 个问题：
+
+1. **协程间的并发问题**：除了 main1 耗时 3s 外，其他都是 2s，说明 main1 方式串行执行 2 个协程，其他是并发执行协程。
+2. **协程是否阻塞父协程/父进程的问题**：上述测试都使用了 await，即等待协程执行完毕后再继续往下走，所以都是阻塞式的，主进程都在此等待协程的执行完。—— 那么如何才能不阻塞父协程呢？ 不加 await 行么？ —— 上面 3 种方式都不行！
+
+下面介绍可以不阻塞主协程的方式。
+
+## task 实现更灵活的协程
+
+一切都在代码中：
+
+```python
+
+# 验证 task 启动协程是立即执行的
+async def main4():
+    # create_task() Python 3.7 中被加入
+    task1 = asyncio.create_task(say_after(2, "2s"))
+    task2 = asyncio.create_task(say_after(1, "1s"))
+    # 创建任务后会立即开始执行，后续可以用 await 来等待其完成后再继续，也可以被 cancle
+    await task1  # 等待 task1 执行完，其实返回时 2 个task 都已经执行完
+    print("--")  # 最后才会被打印，因为 2 个task 都已经执行完
+    await task2
+    # 这里是等待所有 task 结束才继续运行。
+
+
+# 验证父协程与子协程的关闭关系
+async def main5():
+    task1 = asyncio.create_task(say_after(2, "2s"))
+    task2 = asyncio.create_task(say_after(1, "1s"))
+    # 如果不等待，函数会直接 return，main5 协程结束，task1/2 子协程也结束，所以看不到打印
+    # 此处等待 1s，则会只看到 1 个，等待 >2s，则会看到 2 个 task 的打印
+    await asyncio.sleep(2)
+
+
+# python3.8 后 python 为 asyncio 的 task 增加了很多功能：
+# get/set name、获取正在运行的 task、cancel 功能
+# 验证 task 的 cancel() 功能
+async def cancel_me(t):
+    # 定义一个可处理 CancelledError 的协程
+    print("cancel_me(): before sleep")
+    try:
+        await asyncio.sleep(t)
+    except asyncio.CancelledError:
+        print("cancel_me(): cancel sleep")
+        raise
+    finally:
+        print("cancel_me(): after sleep")
+    return "I hate be canceled"
+
+
+async def main6():
+    async def test(t1, t2):
+        task = asyncio.create_task(cancel_me(t1))
+        await asyncio.sleep(t2)
+        task.cancel()  # 会在 task 内引发一个 CancelledError
+        try:
+            await task
+        except asyncio.CancelledError:
+            print("main(): cancel_me is cancelled now")
+        try:
+            print(task.result())
+        except asyncio.CancelledError:
+            print("main(): cancel_me is cancelled now")
+
+    # 让其运行2s，但在1s时 cancel 它
+    await test(2, 1)  # await 和 result 时都会引发 CancelledError
+    await test(1, 2)  # await 和 result 时不会引发，并且 result 会得到函数的返回值
+
+runtime(asyncio.run, main4)
+runtime(asyncio.run, main5)
+runtime(asyncio.run, main6)
+```
+
+运行结果：
+
+```bash
+----------main4
+1s
+2s
+--
+==========2.00557
+----------main5
+1s
+2s
+==========3.00160
+----------main6
+cancel_me(): before sleep
+cancel_me(): cancel sleep
+cancel_me(): after sleep
+main(): cancel_me is cancelled now
+main(): cancel_me is cancelled now
+cancel_me(): before sleep
+cancel_me(): after sleep
+I hate be canceled
+==========3.00924
+```
+
+## 技术总结
+
+细节都在注释里直接描述了，总结一下：
+
+- await 会阻塞主协程，等待子协程完成
+- `await asyncio.gather/wait()` 可以实现多个子协程的并发执行
+- await 本身要在协程中执行，即在父协程中执行
+- `asyncio.get_event_loop().run_until_complete()` 和 `asyncio.run()` 可作为最初的协程开始入口
+- task 是最新、最推荐的协程方式，可以完成阻塞、非阻塞，
+  - `task = asyncio.create_task(协程)` 后直接开始执行了，并不会等待其他指令
+  - `await task` 是阻塞式，等待 task 执行结束
+  - 不 await，非阻塞，但要此时父协程不能退出，否则 task 作为子协程也被退出
+  - task 可 `cancel()` 取消功能，可 `result()` 获取子协程的返回值

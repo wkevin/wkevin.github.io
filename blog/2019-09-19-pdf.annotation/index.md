@@ -1,0 +1,42 @@
+---
+title: 如何创建独立文件的PDF注释/标注
+date: 2019-09-19 14:35:45 +0800
+description: " "
+authors: wKevin
+categories:
+  - it
+tags:
+  - PDF
+  - Xournal++
+---
+
+字幕文件通常不嵌入视频文件，独立的字幕文件利于：存储、修改、分享、多格式、多编码……
+
+在书籍上直接标注（Annotation）或注释（commention），即内嵌为书籍的元数据（meta data），不但破坏了原书，干扰了读者，也不利于修改、分享、尤其是合并，多人的标注能够合并、修订……这才是我们想要的。
+
+针对不同格式 pdf（azw、epub……容我以后再研究研究）有不同的软件可以实现此目的，此处列举几个。
+
+<!--truncate-->
+
+| APP                                                                                             | OS              | 注释文件格式 | 说明                                                                                                                     | 决策       |
+| ----------------------------------------------------------------------------------------------- | --------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ | ---------- |
+| Acrobat PDF Reader                                                                              | Win/Linux/macOS |              | 收费                                                                                                                     | **放弃！** |
+| Foxit Reader                                                                                    | Win/Linux/macOS | .fdf         | [导入导出方法](https://www.foxitsoftware.com/blog/using-comments-data-import-and-export/)比较繁琐<br/>Linux 版没有此功能 | **放弃！** |
+| Mendeley                                                                                        | Win/Linux/macOS |              | 导出文件保存在 Mendely 的服务器                                                                                          | **放弃！** |
+| [Skim](https://sourceforge.net/projects/skim-app/)                                              | macOS           | .skim        | 仅能用于 macOS                                                                                                           | **放弃！** |
+| [Xournal](http://xournal.sourceforge.net/)、[Xournal++](https://github.com/xournalpp/xournalpp) | Win/Linux/macOS | .xopp        | Xournal++ 是 Xournal 的 C++ 重写升级版                                                                                   | **推荐！** |
+
+Xournal++ 同时还有其他非常优秀的特性：
+
+- Github 开源
+- 方便的创建、复制、删除一页 PDF
+- 它其实首先是个画板，可以用于鼠标、画笔等手工绘图功能
+- 安装
+  - 下载： https://github.com/xournalpp/xournalpp/releases
+  - Ubuntu 也可以 apt 安装
+
+```
+sudo add-apt-repository ppa:andreasbutti/xournalpp-master
+sudo apt update
+sudo apt install xournalpp
+```

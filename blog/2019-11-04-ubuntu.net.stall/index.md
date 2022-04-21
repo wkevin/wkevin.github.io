@@ -1,0 +1,208 @@
+---
+title: 网络安装 Ubuntu
+date: 2019-11-04 11:03:36 +0800
+description: " "
+authors: wKevin
+categories:
+  - it
+tags:
+  - ubuntu
+  - pxe
+---
+
+摘要：
+
+- 通过 pxe 模式，网络安装 Ubuntu。
+- 多个 Ubuntu 版本可选性安装。
+- 用于无法开机箱进行光驱安装、或不想折腾搞硬盘安装、或 USB 被公司封闭无法 U 盘安装的朋友。
+
+<!--truncate-->
+
+参考：
+
+- [Configure PXE Server In Ubuntu 16.04](https://www.maketecheasier.com/configure-pxe-server-ubuntu/)
+- [网络安装 Ubuntu16.04](https://www.cnblogs.com/zhangqunshi/p/6729823.html)
+
+基本步骤：
+
+- Client BISO 配置：1、网卡启动；2、网卡支持 pxe 模式
+- Client 在 BIOS 阶段通过 DHCP 找 Server 要到 IP 地址
+- Server 分配 IP，同时指定 pxe 的启动文件 pxelinux
+- Client 通过 tftp 协议下载 pxelinux 文件
+- Client 通过 pxelinux 的配置信息（kernel ... initrd=...），通过 tftp 下载 kernel & initrd
+- Client 通过 pxelinux 的配置信息（nfsroot=...)，通过 http 或 nfs 下载 ubuntu 的 live images
+
+干货如下：
+
+## DHCP
+
+- `sudo apt-get install isc-dhcp-server`
+- `sudo vi /etc/default/isc-dhcp-server` 限定网卡开启 dhcp
+- `sudo vi /etc/dhcp/dhcpd.conf`
+
+example1: server(192.168.1.100)
+
+```
+option domain-name "localhost";  # 必须要改，否则syslog报异常，pxe client IP无法获取
+option domain-name-servers 本机IP地址;  # 必须要改，本机IP地址必须也要在192.168.1.0/24网段中
+
+allow booting;
+allow bootp;
+
+subnet 192.168.1.0 netmask 255.255.255.0 {
+    range 192.168.1.10 192.168.1.30;
+    option subnet-mask 255.255.255.0;
+    option routers 本机IP地址;
+    option broadcast-address 192.168.1.255;
+    next-server 本机IP地址;
+    filename "pxelinux.0";
+}
+```
+
+example2: server(192.168.1.2)
+
+```
+subnet 192.168.1.0 netmask 255.255.255.0 {
+   range 192.168.1.3 192.168.1.11;
+   option routers 192.168.1.2;
+   option subnet-mask 255.255.255.0;
+   option broadcast-address 192.168.1.255;
+   option domain-name-servers 192.168.1.2;
+   next-server 192.168.1.2;
+   filename "pxelinux.0";
+}
+```
+
+- `sudo /etc/init.d/isc-dhcp-server start` —— 可以加入 `/etc/rc.local`
+- Test:
+  - `service isc-dhcp-server status`
+
+## tftp
+
+- `sudo apt install tftpd-hpa tftp-hpa inetutils-inetd`
+- `sudo service tftpd-hpa start`
+- `sudo vi /etc/inetd.conf`
+
+```
+tftp dgram udp wait root /usr/sbin/in.tftpd /usr/sbin/in.tftpd -s /var/lib/tftpboot
+```
+
+- `sudo vi /etc/default/tftpd-hpa`
+
+```
+TFTP_USERNAME="tftp"
+TFTP_DIRECTORY="/var/lib/tftpboot"
+TFTP_ADDRESS=":69"
+TFTP_OPTIONS="--secure"
+RUN_DAEMON="yes"
+OPTIONS="-l -s /var/lib/tftpboot"
+```
+
+- `sudo update-inetd --enable BOOT` 重启时自启动
+- `sudo service tftpd-hpa start`
+- `netstat -lu | grep tftp` check
+- test
+  - `tftp localhost`
+  - `get ...`
+
+## 网络启动文件（ pxelinux.0 )
+
+- `sudo mkdir /var/lib/tftpboot`
+- 3 种获取方式
+  - 方式 1：从 **syslinux** 拷贝 —— **没有默认配置**
+    - `sudo apt install syslinux`
+    - `sudo mkdir /var/lib/tftpboot/pxelinux.cfg`
+    - `sudo cp /usr/lib/syslinux/vesamenu.c32 /var/lib/tftpboot/`
+    - `sudo cp /usr/lib/syslinux/pxelinux.0 /var/lib/tftpboot/`
+  - 方式 2：从 ISO 中获取 —— **后来很多 ISO 都没有了**
+  - 方式 3：网上下载 **netboot** —— **推荐**
+    - `wget http://archive.ubuntu.com/ubuntu/dists/[precise|xenial]/main/installer-[amd64|i386]/current/images/netboot/netboot.tar.gz`
+      - 可以在 mirrors.xxx 中找到
+      - precise: 12.04; xenial: 16.04
+      - eg: `wget https://mirrors.zte.com.cn/ubuntu/dists/bionic/main/installer-amd64/current/images/netboot/netboot.tar.gz`
+    - `mv netboot.tar.gz /var/lib/tftpboot`
+    - `cd /var/lib/tftpboot && sudo tar -xzvf netboot.tar.gz`
+- 配置 pxe 获取 kernel 和 initrd 的方式和路径 —— **此处配置要和后面 nfs、apache 中配置一致**
+  - `sudo vi /var/lib/tftpboot/ubuntu-installer/[amd64|i386]/boot-screens/txt.cfg` —— **新版**
+    - `sudo vi /var/lib/tftpboot/pxelinux.cfg/default` —— **旧版**
+  - 重点配置下面 2 行
+    - `kernel ......`
+    - `append initrd=...... ks=......`
+    - 具体怎么配置下文分方式描述
+
+## 准备 Ubuntu
+
+- 下载 ubuntu iso
+  - `https://mirrors.zte.com.cn/ubuntu-releases`
+- 路径设计
+  - 支持多个版本 Ubuntu 同时安装
+  - Ubuntu 释放文件到：`/var/lib/tftpboot/ubuntu/xx.xx` xx.xx 为 ubuntu 的版本号，根据需求可以设计更复杂路径
+- 准备 16.04
+  - `sudo mount -o loop ubuntu-16.04.3-desktop-amd64.iso /media/`
+  - `sudo mkdir -p /var/lib/tftpboot/ubuntu/16.04`
+  - `sudo cp -r /media/* /var/lib/tftpboot/ubuntu/16.04`
+  - `sudo cp -r /media/.disk /var/lib/tftpboot/ubuntu/16.04`
+  - `sudo unmout /media`
+- 准备 18.04
+  - `sudo mount -o loop ubuntu-18.04.3-desktop-amd64.iso /media/`
+  - `sudo mkdir -p /var/lib/tftpboot/ubuntu/18.04`
+  - `sudo cp -r /media/* /var/lib/tftpboot/ubuntu/18.04`
+  - `sudo cp -r /media/.disk /var/lib/tftpboot/ubuntu/18.04`
+  - `sudo umount /media`
+
+## kernel & initrd
+
+- `sudo vi /var/lib/tftpboot/ubuntu-installer/[amd64|i386]/boot-screens/txt.cfg`
+- 方式 1：使用 ISO 中 casper 的 initrd.lz 和 kernel(vmlinuz.efi) —— **支持 nfs**
+  - pxe 配置
+    - 16.04
+      - `kernel ubuntu/16.04/casper/vmlinuz.efi`
+      - `append vga=788 boot=casper netboot=nfs nfsroot=<本机IP>:/var/lib/tftpboot/ubuntu/16.04 initrd=ubuntu/16.04/casper/initrd.lz --- quiet`
+        - splash：表示 loading 屏幕是否显示，禁用的话 loading 时一片空白
+    - 18.04
+      - `kernel ubuntu/18.04/casper/vmlinuz`
+      - `append vga=788 boot=casper netboot=nfs nfsroot=<本机IP>:/var/lib/tftpboot/ubuntu/18.04 initrd=ubuntu/18.04/casper/initrd --- quiet`
+- 方式 2：使用 netboot 包含的 initrd.gz 和 kernel(linux) —— **不支持 nfs，且 client 始终默认 http 访问 server，要求 server 必须使用 apache**
+  - 前面 netboot 已经释放到 `/var/lib/tftpboot` 目录下
+  - pxe 配置
+    - `kernel ubuntu-installer/amd64/linux`
+    - `append vga=788 netboot=nfs nfsroot=192.168.1.10:/var/lib/tftpboot/ubuntu initrd=ubuntu-installer/amd64/initrd.gz quiet splash`
+
+## Ubuntu live images
+
+### NFS
+
+- `sudo apt install nfs-kernel-server`
+- `sudo vi /etc/exports`
+  - `/var/lib/tftpboot/ubuntu *(ro,async,no_root_squash,no_subtree_check)`
+- `sudo exportfs -a`
+- `sudo /etc/init.d/nfs-kernel-server start`
+
+### Apache
+
+- `sudo apt-get install apache2`
+- 配置：
+  - ……
+
+## Client 配置
+
+- BIOS
+  - net interface pxe mode： enable
+  - security boot：disable
+  - 不能用 UEFI,要切换到 legace only
+  - boot sequence：net first
+- 推荐
+  - 使用集成显卡，pxelinux 对扩展显卡支持不完备（异常黑屏、蓝屏、粉屏……）
+    - BIOS 中切换到 IDG（集成显卡），而不是 Auto（会自动到 PEG-PCI-E 显卡）
+  - 使用小尺寸的显示器，pxelinux 大显示器支持不完备（字体、图标过大……）
+- 安装完毕后，网卡不能使用
+  - NetworkManager 中找不到网卡
+    - 原因 1：NetworkManager 没有使能
+    - 解决
+      - `sudo vi /etc/NetworkManager/NetworkManager.conf` 增加 `managed=true` —— 使能 NM
+      - `sudo service NetworkManager stop`
+      - `sudo rm /var/lib/NetworkManager/NetworkManager.state`
+      - `sudo service NetworkManager start`
+    - 原因 2：底层不让 NetworkManager 起效
+    - 解决：
+      - `sudo vi /etc/network/interfaces` 这是底层管理网卡的配置文件，有删掉这里管理 eth0 等行，放权给 NetworkManager 管理
