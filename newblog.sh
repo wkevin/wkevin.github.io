@@ -28,7 +28,7 @@ if [ ! -f $fn ]; then
       echo "  - $t" >>$fn
     done
     echo "---" >>$fn
-    echo "" >>$fn
+    echo "<!--truncate-->" >>$fn
     echo "Creat sucess!"
 else
     echo "Creat fail! File is existed"
