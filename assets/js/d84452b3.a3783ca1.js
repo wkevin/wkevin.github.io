@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[6043],{27298:function(s){s.exports=JSON.parse('{"permalink":"/blog/tags/\u5c55\u4f1a/page/2","page":2,"postsPerPage":5,"totalPages":2,"totalCount":7,"previousPage":"/blog/tags/\u5c55\u4f1a","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

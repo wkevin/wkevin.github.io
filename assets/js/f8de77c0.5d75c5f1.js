@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[5826],{87661:function(e){e.exports=JSON.parse('{"permalink":"/blog/tags/python","page":1,"postsPerPage":5,"totalPages":2,"totalCount":7,"nextPage":"/blog/tags/python/page/2","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
