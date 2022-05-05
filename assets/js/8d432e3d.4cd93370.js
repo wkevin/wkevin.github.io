@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[4801],{94035:function(s){s.exports=JSON.parse('{"label":"Floccus","permalink":"/blog/tags/floccus","allTagsPath":"/blog/tags","count":1}')}}]);

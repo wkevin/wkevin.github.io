@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[4391],{20776:function(s){s.exports=JSON.parse('{"label":"6LoWPAN","permalink":"/blog/tags/6-lo-wpan","allTagsPath":"/blog/tags","count":1}')}}]);

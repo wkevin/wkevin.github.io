@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[7614],{17249:function(s){s.exports=JSON.parse('{"label":"Xournal++","permalink":"/blog/tags/xournal","allTagsPath":"/blog/tags","count":1}')}}]);

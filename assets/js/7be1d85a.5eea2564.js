@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[5134],{73065:function(s){s.exports=JSON.parse('{"label":"kindle","permalink":"/blog/tags/kindle","allTagsPath":"/blog/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[658],{42506:function(s){s.exports=JSON.parse('{"label":"bios","permalink":"/blog/tags/bios","allTagsPath":"/blog/tags","count":1}')}}]);

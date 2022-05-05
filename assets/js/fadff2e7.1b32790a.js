@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[2070],{93385:function(s){s.exports=JSON.parse('{"label":"basler","permalink":"/blog/tags/basler","allTagsPath":"/blog/tags","count":1}')}}]);

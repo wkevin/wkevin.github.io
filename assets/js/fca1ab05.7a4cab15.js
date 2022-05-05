@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[7456],{24360:function(s){s.exports=JSON.parse('{"label":"tauri","permalink":"/blog/tags/tauri","allTagsPath":"/blog/tags","count":1}')}}]);

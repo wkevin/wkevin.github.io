@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[5582],{74820:function(s){s.exports=JSON.parse('{"label":"uIPv6","permalink":"/blog/tags/u-i-pv-6","allTagsPath":"/blog/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[3285],{81828:function(s){s.exports=JSON.parse('{"label":"Contiki","permalink":"/blog/tags/contiki","allTagsPath":"/blog/tags","count":1}')}}]);
