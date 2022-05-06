@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[3391],{79860:function(s){s.exports=JSON.parse('{"label":"uefi","permalink":"/blog/tags/uefi","allTagsPath":"/blog/tags","count":1}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[5527],{12603:function(s){s.exports=JSON.parse('{"label":"VSCode","permalink":"/blog/tags/vs-code","allTagsPath":"/blog/tags","count":1}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[7201],{44417:function(s){s.exports=JSON.parse('{"label":"feedly","permalink":"/blog/tags/feedly","allTagsPath":"/blog/tags","count":1}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[5511],{1906:function(s){s.exports=JSON.parse('{"label":"YAPF","permalink":"/blog/tags/yapf","allTagsPath":"/blog/tags","count":1}')}}]);

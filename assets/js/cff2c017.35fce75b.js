@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[5433],{47703:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"RISC-v","count":1,"permalink":"/blog/tags/risc-v"}')}}]);

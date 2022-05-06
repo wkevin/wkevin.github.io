@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[9530],{27532:function(s){s.exports=JSON.parse('{"label":"Agile","permalink":"/blog/tags/agile","allTagsPath":"/blog/tags","count":2}')}}]);
