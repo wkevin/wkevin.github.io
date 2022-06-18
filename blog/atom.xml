@@ -2,12 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wkevin.github.io/blog</id>
     <title>wkevin Blog</title>
-    <updated>2022-06-02T00:00:00.000Z</updated>
+    <updated>2022-06-17T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wkevin.github.io/blog"/>
     <subtitle>wkevin Blog</subtitle>
     <icon>https://wkevin.github.io/img/logo.svg</icon>
     <rights>Copyright © 2022 wkevin</rights>
+    <entry>
+        <title type="html"><![CDATA[Gitee Jenkins Plugin]]></title>
+        <id>/2022/06/17/gitee.jenkins.plugin</id>
+        <link href="https://wkevin.github.io/blog/2022/06/17/gitee.jenkins.plugin"/>
+        <updated>2022-06-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[gitee.jenkins.plugin]]></summary>
+        <content type="html"><![CDATA[<p>6.18 又买了一个新的腾讯云 VPS，本以为轻车熟路 10 分钟配置完毕，没想到搞了半小时，配置 gitee 的 jenkins 插件就 10 分钟，又翻了一遍<a href="https://gitee.com/oschina/Gitee-Jenkins-Plugin" target="_blank" rel="noopener noreferrer">gitee 插件文档</a>，每次都要翻一遍这个文档。</p><p>这次画个图，争取下次 3 分钟搞定 —— 但画图花了半小时，哈哈！</p><img loading="lazy" src="https://www.plantuml.com/plantuml/svg/XLHBJnDH5DxVNt722XQ5bPj630f9fMf217L9RgUNpiZqtcRkLE9kU1Urj1XYJF55G34cBQmCK1u_ffsPTiLVyDpUKef5cTsSyvtNztqp8zAbZfjDsqJEMZn37Pg6jE32C1sHPk0wMKO8XbtBi3AKkn1d784Ig8JujKJCSXbJuHWXNBWCR3Q3S5BptlYLjSRESb1uNw_-hdbloHFAQOfrMaNkaN6EUzWsJDZPL3iqoQXZcD3NwjlN1IAC9q5Dw9dJNCw7fvMhELq3UaUE2ZvZfR8EWydNqcLf5TCtN6QeQmb-5JO4vynGCKbKTVi5E4MYXg6_lmKR66Z3JI5TUFRqCQPCryt8wD1GIYK63P4cemvBCkvQr9OGXVl994Hmpb-7ELRAH5xLPU7cro1NR9n_2TQ_0xXYbd5rO4_ZeGnpfE3KdgQ6mQISRa4b2SgxkWhgX_bmysVzU3quBeRVviFATbXS2KjB_cevo5SkJjuHl_1B8w3L5ZIV287x4-FGE5Z4h4RNl8MkdMD85SIZKFCk5stlkN6RK968CabkowyUwqfrsvX8KuiZUp5R9AWzE3X87bauRBZjDBNCb1f0Ek_Fx-W8OcvOOdmCuyrI8LWga34c3SVAjFJh1CaKGyckb8t2PBR58lWh-R2w5rRBjtaFuYBHSfv8eABACkYa7lzSSyk3h6KdOGh5Jg5s5oSb0g1ZSoQUGi4mAKVhMX8oMMco95waAL2K03x-MSxVBTNFAy7cKNFx23Nq2_j-OQ7XBGOVLeFj7HAidVcv0qNA74kOGio2_-d0_-pLlFaEFOtzDbSGVDo7b-qFfNvOrjv3_RkEZokjOz7_T-nnCIuNRbKqKugb5opn44ibQ1TgsVxTJybpWz_yuWPqYWeRJMzUtz6UBrunHy4QUpymgmHIwz_L-zTFpz7DlMP1voFR-4FINmaPmR7ua_m3" class="img_E7b_"><p>总结：</p><ul><li>2 个 token<ul><li>连接 token：在 gitee 上创建，写在 jenkins 的插件配置里 —— 每个 jenkins 一个。</li><li>webhook token：在 jenkins job 中创建，写在 gitee 的项目 webhook 配置里 —— 每个 Jenkins Job 一个。</li></ul></li><li>文档里的 Job 配置写了很多，我大多数没配，默认或置空也跑的起来。</li><li>Jenkins docker 启动参数关注：<ul><li><code>-u root</code>：否则 jenkins 容器没有权限操作本地路径，因为我把 jenkins_home <code>-v</code> 到本地其他路径上了。</li><li><code>-e TZ=Asia/Shanghai</code>: 否则 jenkins 中的时间是格林尼治时间。</li></ul></li></ul>]]></content>
+        <author>
+            <name>wKevin</name>
+            <uri>http://weibo.com/wkevin27</uri>
+        </author>
+        <category label="gitee" term="gitee"/>
+        <category label="jenkins" term="jenkins"/>
+        <category label="plugin" term="plugin"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Go 调用 Python]]></title>
         <id>/2022/06/02/embedding.python.in.go</id>
