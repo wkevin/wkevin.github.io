@@ -4,11 +4,20 @@
         <title>wkevin Blog</title>
         <link>https://wkevin.github.io/blog</link>
         <description>wkevin Blog</description>
-        <lastBuildDate>Sat, 13 Aug 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 25 Aug 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2022 wkevin</copyright>
+        <item>
+            <title><![CDATA[到底用哪个方式创建 vite 项目]]></title>
+            <link>https://wkevin.github.io/blog/2022/08/25/how.to.create.vite.project</link>
+            <guid>/2022/08/25/how.to.create.vite.project</guid>
+            <pubDate>Thu, 25 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[how.to.create.vite.project]]></description>
+            <content:encoded><![CDATA[<p>自从 vite 被 vue 官方替代了 vue-cli(webpack) 用来创建 vue 项目之后，先后出现了几个工具（封装）来作为创建项目的脚手架，各种 blog 中会搜到各个历史时期的用法，和各种变换用法，我来整理一下，因为搜到了废弃的用法还不小心用了起来，还挺烦人的。</p><p>先说结论：<strong>用下表中的 (4)、(5)，等效的</strong>。</p><table><thead><tr><th>脚手架</th><th>npm install</th><th>npx</th><th>npm init</th></tr></thead><tbody><tr><td><a href="https://www.npmmirror.com/package/create-vite-app" target="_blank" rel="noopener noreferrer">create-vite-app</a><br>(已废弃)</td><td>(1)<br><code>npm install -g create-vite-app</code><br><code>create-vite-app my-project</code></td><td><code>npx create-vite-app</code></td><td>(2)<br><code>npm init vite-app my-project</code><br><code>cd my-project</code><br><code>npm i</code></td></tr><tr><td><a href="https://www.npmmirror.com/package/%40vitejs%2Fcreate-app" target="_blank" rel="noopener noreferrer">@vitejs/create-app</a><br>(已废弃)</td><td></td><td><code>npx @vitejs/create-app</code></td><td>(3)<code>npm init @vitejs/app</code></td></tr><tr><td><a href="https://www.npmmirror.com/package/create-vite" target="_blank" rel="noopener noreferrer">create-vite</a><br>(<strong>官方推荐</strong>)</td><td></td><td><code>npx create-vite</code></td><td>(4)<code>npm init vite@latest</code><br>(5)<code>npm create vite@latest</code></td></tr></tbody></table><ul><li>create-vite-app 已废弃多年，用它创建的项目还在用 vit 1.x 的版本，现在已结 3.x 了。其官方 README 中写的用法是 (2)，但很多 blog 中用的是 (1)。</li><li>@vitejs/create-app 看名字是官方的，但也于 2021 年废弃，应该是用了不短的时间，很多 blog 都在使用 (3) 的方式创建 vite 项目。</li><li>create-vite 是现行官方推荐，README 中写的是方法 (5)，但一些 blog 就是写 (4)，可能是为了展示一下自己指导 npm create 是 npm init 的别名吧。</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="npx-避免了本地全局安装">npx 避免了本地全局安装<a class="hash-link" href="#npx-避免了本地全局安装" title="Direct link to heading">​</a></h2><p>脚手架都可以用 npx 执行，并且推荐用 npx 执行，但只有 create-vite-app 还创建了命令行入口，所以可以 shell 启动。</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="npm-init-是个封装">npm init 是个封装<a class="hash-link" href="#npm-init-是个封装" title="Direct link to heading">​</a></h2><p>会自动转换为 npx 命令，转换规则：</p><ul><li>npm init foo -&gt; npx create-foo</li><li>npm init @usr/foo -&gt; npx @usr/create-foo</li><li>npm init @usr -&gt; npx @usr/create</li></ul><h2 class="anchor anchorWithStickyNavbar_mojV" id="npm-create-是别名">npm create 是别名<a class="hash-link" href="#npm-create-是别名" title="Direct link to heading">​</a></h2><p>2018.4 npm v6 中发布：npm create 是 npm init 的别名。</p>]]></content:encoded>
+            <category>vite</category>
+        </item>
         <item>
             <title><![CDATA[Rust 开源书]]></title>
             <link>https://wkevin.github.io/blog/2022/08/13/rust.resource</link>
