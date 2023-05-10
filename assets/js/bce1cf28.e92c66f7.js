@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[7371],{6286:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"UFI","count":1,"permalink":"/blog/tags/ufi"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[37057],{13849:function(s){s.exports=JSON.parse('{"permalink":"/blog/tags/\u6cd5\u5170\u514b\u798f","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[96996],{56470:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"nvm","count":1,"permalink":"/blog/tags/nvm"}')}}]);

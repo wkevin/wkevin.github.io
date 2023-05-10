@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[15002],{24775:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"asyncio","count":1,"permalink":"/blog/tags/asyncio"}')}}]);

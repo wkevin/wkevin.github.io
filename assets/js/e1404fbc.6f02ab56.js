@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[3986],{4227:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"lind-width","count":1,"permalink":"/blog/tags/lind-width"}')}}]);

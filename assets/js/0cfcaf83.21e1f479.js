@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[38878],{36398:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"RISC","count":1,"permalink":"/blog/tags/risc"}')}}]);
