@@ -24,6 +24,20 @@
         <category label="string" term="string"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[rust 固定 size 类型]]></title>
+        <id>/2024/01/21/rust.fix.size.type</id>
+        <link href="https://wkevin.github.io/blog/2024/01/21/rust.fix.size.type"/>
+        <updated>2024-01-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[rust.fix.size.type]]></summary>
+        <content type="html"><![CDATA[<p><img loading="lazy" src="/assets/images/rust_fix_size_type-e52e09a71586dbcb80b9c3537ac0af71.svg" width="1723" height="2060" class="img_E7b_"></p><p>rust 类型有固定 size 和动态 size 的，比如 <code>str</code> 就是动态 size，本篇先梳理固定 size 的。</p><p>只是捡了一些我个人关心、与 C、python、go 有差异的点来记录，跟完整记录差得远。</p><p>rust 的 struct 和 enum 都挺有意思的，struct 的静态和实例方法、enum 的捆绑数据……都是特色。</p>]]></content>
+        <author>
+            <name>wKevin</name>
+            <uri>http://weibo.com/wkevin27</uri>
+        </author>
+        <category label="rust" term="rust"/>
+        <category label="type" term="type"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Python3.12 介绍]]></title>
         <id>/2023/11/21/python3.12</id>
         <link href="https://wkevin.github.io/blog/2023/11/21/python3.12"/>
