@@ -2,12 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wkevin.github.io/blog</id>
     <title>wkevin Blog</title>
-    <updated>2023-11-21T00:00:00.000Z</updated>
+    <updated>2024-01-31T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wkevin.github.io/blog"/>
     <subtitle>wkevin Blog</subtitle>
     <icon>https://wkevin.github.io/img/logo.svg</icon>
     <rights>Copyright © 2024 wkevin</rights>
+    <entry>
+        <title type="html"><![CDATA[rust 字符串]]></title>
+        <id>/2024/01/31/rust.str.and.string</id>
+        <link href="https://wkevin.github.io/blog/2024/01/31/rust.str.and.string"/>
+        <updated>2024-01-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[rust.str.and.string]]></summary>
+        <content type="html"><![CDATA[<p><img loading="lazy" src="/assets/images/rust_str_String-baf0cd0a30c2a583d654ae7de2f3b4d2.svg" width="1500" height="1497" class="img_E7b_"></p><ul><li>白色线条是创建内建类型： <code>str</code> 或 <code>&amp;str</code></li><li>红色线条是创建标准库 struct： <code>std::string::String</code></li><li>绿色线条是其他关联关系</li></ul><p>主要是为了梳理 <code>str</code> 和 <code>String</code> 如何初始化，以及有哪些方法能够互相转化。</p><p>还有很多方法能够互相转化，但梳理到这里感觉都懂了，剩下的看看文档就没问题了，就不往图上整理了。</p><p>最后整理了几种字符串拼接的方式。</p>]]></content>
+        <author>
+            <name>wKevin</name>
+            <uri>http://weibo.com/wkevin27</uri>
+        </author>
+        <category label="rust" term="rust"/>
+        <category label="str" term="str"/>
+        <category label="string" term="string"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Python3.12 介绍]]></title>
         <id>/2023/11/21/python3.12</id>

@@ -4,11 +4,22 @@
         <title>wkevin Blog</title>
         <link>https://wkevin.github.io/blog</link>
         <description>wkevin Blog</description>
-        <lastBuildDate>Tue, 21 Nov 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 31 Jan 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2024 wkevin</copyright>
+        <item>
+            <title><![CDATA[rust 字符串]]></title>
+            <link>https://wkevin.github.io/blog/2024/01/31/rust.str.and.string</link>
+            <guid>/2024/01/31/rust.str.and.string</guid>
+            <pubDate>Wed, 31 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[rust.str.and.string]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/rust_str_String-baf0cd0a30c2a583d654ae7de2f3b4d2.svg" width="1500" height="1497" class="img_E7b_"></p><ul><li>白色线条是创建内建类型： <code>str</code> 或 <code>&amp;str</code></li><li>红色线条是创建标准库 struct： <code>std::string::String</code></li><li>绿色线条是其他关联关系</li></ul><p>主要是为了梳理 <code>str</code> 和 <code>String</code> 如何初始化，以及有哪些方法能够互相转化。</p><p>还有很多方法能够互相转化，但梳理到这里感觉都懂了，剩下的看看文档就没问题了，就不往图上整理了。</p><p>最后整理了几种字符串拼接的方式。</p>]]></content:encoded>
+            <category>rust</category>
+            <category>str</category>
+            <category>string</category>
+        </item>
         <item>
             <title><![CDATA[Python3.12 介绍]]></title>
             <link>https://wkevin.github.io/blog/2023/11/21/python3.12</link>
