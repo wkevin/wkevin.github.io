@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[25311],{10963:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"cpython_monitor","count":1,"permalink":"/blog/tags/cpython-monitor"}')}}]);

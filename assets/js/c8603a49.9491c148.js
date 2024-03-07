@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[51589],{57364:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"pip","count":1,"permalink":"/blog/tags/pip"}')}}]);

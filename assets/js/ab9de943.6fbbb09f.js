@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[98632],{42959:s=>{s.exports=JSON.parse('{"label":"TypeVarTuple","permalink":"/blog/tags/type-var-tuple","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

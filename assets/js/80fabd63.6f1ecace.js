@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[85875],{79152:s=>{s.exports=JSON.parse('{"label":"cookbook","permalink":"/blog/tags/cookbook","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

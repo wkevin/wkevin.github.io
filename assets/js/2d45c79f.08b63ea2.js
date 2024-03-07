@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[66519],{67328:s=>{s.exports=JSON.parse('{"label":"RPL","permalink":"/blog/tags/rpl","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

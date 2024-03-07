@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[68493],{27543:s=>{s.exports=JSON.parse('{"label":"VISA","permalink":"/blog/tags/visa","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

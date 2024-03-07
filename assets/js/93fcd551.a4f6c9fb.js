@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[48821],{93490:s=>{s.exports=JSON.parse('{"label":"jupyter","permalink":"/blog/tags/jupyter","allTagsPath":"/blog/tags","count":2,"unlisted":false}')}}]);

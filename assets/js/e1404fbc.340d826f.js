@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[23990],{6080:s=>{s.exports=JSON.parse('{"label":"lind-width","permalink":"/blog/tags/lind-width","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

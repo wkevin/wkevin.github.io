@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[70565],{88067:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"VPP","count":1,"permalink":"/blog/tags/vpp"}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[75656],{83396:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"IPSO","count":1,"permalink":"/blog/tags/ipso"}')}}]);

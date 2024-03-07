@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[63120],{67411:s=>{s.exports=JSON.parse('{"label":"python3.11","permalink":"/blog/tags/python-3-11","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

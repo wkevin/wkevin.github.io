@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[60859],{22350:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"open source book","count":1,"permalink":"/blog/tags/open-source-book"}')}}]);

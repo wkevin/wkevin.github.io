@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[50672],{98131:s=>{s.exports=JSON.parse('{"label":"PGP","permalink":"/blog/tags/pgp","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

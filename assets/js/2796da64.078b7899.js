@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[77952],{33189:s=>{s.exports=JSON.parse('{"label":"opencv","permalink":"/blog/tags/opencv","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

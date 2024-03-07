@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[85093],{86986:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"CISC","count":1,"permalink":"/blog/tags/cisc"}')}}]);

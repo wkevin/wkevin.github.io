@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[47163],{55168:s=>{s.exports=JSON.parse('{"label":"TypedDict","permalink":"/blog/tags/typed-dict","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
