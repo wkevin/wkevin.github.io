@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[6722],{49119:s=>{s.exports=JSON.parse('{"label":"pocketflow","permalink":"/blog/tags/pocketflow","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
