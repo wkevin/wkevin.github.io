@@ -4,11 +4,123 @@
         <title>wkevin Blog</title>
         <link>https://wkevin.github.io/blog</link>
         <description>wkevin Blog</description>
-        <lastBuildDate>Wed, 19 Mar 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 29 Jun 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2025 wkevin</copyright>
+        <item>
+            <title><![CDATA[WebRTC（Web Real-Time Communication）]]></title>
+            <link>https://wkevin.github.io/blog/2025/06/29/webrtc</link>
+            <guid>https://wkevin.github.io/blog/2025/06/29/webrtc</guid>
+            <pubDate>Sun, 29 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[webrtc]]></description>
+            <content:encoded><![CDATA[<ul>
+<li>让浏览器和移动应用能够直接进行实时通信，而无需借助中间服务器。</li>
+<li>这种通信包括视频通话、语音聊天以及文件共享等。</li>
+<li>WebRTC 的核心优势在于它的点对点（P2P）连接能力，这大大降低了延迟，提高了通信效率。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="原理">原理<a href="https://wkevin.github.io/blog/2025/06/29/webrtc#%E5%8E%9F%E7%90%86" class="hash-link" aria-label="Direct link to 原理" title="Direct link to 原理">​</a></h2>
+<p>虽然 WebRTC 目标是实现 P2P 连接，但建立连接过程仍需要一些服务器的协助。</p>
+<ul>
+<li>信令（Signaling）：这是 WebRTC 连接建立的第一步，也是至关重要的一步。由于 WebRTC 规范没有定义信令的具体方式，<strong>开发者可以自由选择任何信令机制（例如 WebSocket、XHR、SIP 等）</strong>。2 类主要信令：<!-- -->
+<ul>
+<li>会话描述协议（SDP）：SDP 是一种文本协议，用于描述媒体会话的参数，如媒体类型（音频/视频）、编码器、IP 地址、端口等。通信双方通过 SDP 协商媒体的格式和能力。</li>
+<li>ICE 候选者（ICE Candidates）：ICE（Interactive Connectivity Establishment）是一种用于发现和建立 P2P 连接的方法。ICE 候选者是客户端可以用来进行通信的 IP 地址和端口的组合。这包括<!-- -->
+<ul>
+<li><strong>主机候选者（本地 IP 地址）</strong>—— 设备在本地网络中的真实 IP 地址和端口，如果两个设备在同一个局域网内，或者都没有经过 NAT，那么直接使用主机候选者就可以建立连接。</li>
+<li><strong>反射候选者（通过 STUN 服务器获取的公网 IP 地址和端口）</strong>—— 当你的设备通过一个 STUN 服务器请求自己的公网 IP 地址和端口时，STUN 服务器会返回你的设备从互联网上看起来的地址 —— 大多数情况都是这种。</li>
+<li>**中继候选者（通过 TURN 服务器获取的地址） **—— 如果 STUN 服务器也无法帮助你建立直接连接（例如，遇到严格的对称型 NAT，或者防火墙太严格），那么就需要一个 TURN 服务器作为中继。你的设备会向 TURN 服务器请求一个地址，所有的数据都会通过 TURN 服务器转发。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>NAT 穿越（NAT Traversal）：**WebRTC 连接最常见的挑战是网络地址转换（NAT）。由于大多数设备都处于 NAT 后面，无法直接从外部访问。**WebRTC 通过以下方式解决 NAT 穿越问题：<!-- -->
+<ul>
+<li>STUN（Session Traversal Utilities for NAT）服务器：STUN 服务器帮助客户端发现自己的公网 IP 地址和端口。客户端向 STUN 服务器发送请求，服务器返回客户端从互联网上看到的 IP 地址和端口。</li>
+<li>TURN（Traversal Using Relays around NAT）服务器：如果 STUN 无法建立直接连接（例如，遇到对称型 NAT），TURN 服务器就会作为中继服务器。所有数据都通过 TURN 服务器转发，虽然会增加一些延迟，但能确保连接成功。</li>
+</ul>
+</li>
+</ul>
+<p>一旦 P2P 连接建立，媒体数据（音频和视频）就可以直接在浏览器之间传输。WebRTC 使用以下协议进行媒体传输：</p>
+<ul>
+<li>RTP（Real-time Transport Protocol）：RTP 是用于实时数据传输的协议，它提供时间戳、序列号等信息，确保媒体流的顺序和同步。</li>
+<li>RTCP（RTP Control Protocol）：RTCP 与 RTP 协同工作，用于监控 RTP 会话的质量、提供拥塞控制、报告发送和接收统计信息等。</li>
+<li>SRTP（Secure Real-time Transport Protocol）：为了保证通信安全，WebRTC 对所有媒体数据进行加密。SRTP 是 RTP 的安全扩展，它提供了加密、消息认证和重放保护等功能。</li>
+</ul>
+<!-- -->
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="many-to-many">many-to-many<a href="https://wkevin.github.io/blog/2025/06/29/webrtc#many-to-many" class="hash-link" aria-label="Direct link to many-to-many" title="Direct link to many-to-many">​</a></h2>
+<p>多对多通信广泛使用在线上会议、多人游戏等场景，在 WebRTC 出现之前，多对多通讯基本要基于 CS 架构开发独立的 APP，各家开发不同的协议栈来实现。也有基于浏览器的，但都是要用 Adobe 的 Flash 插件来实现。</p>
+<p>WebRTC 出现之后，提供了一个基于浏览器的 BS 架构、帮助开发者搞定了 NAT 穿透的平台，极大地标准化了浏览器内的实时通信能力，并提供了一套开放、免费且无需插件的解决方案，这彻底改变了实时通信的格局。它将复杂的底层网络和媒体处理细节抽象化，使得更多的开发者能够轻松地构建实时音视频应用。</p>
+<p>以下架构是多对多通信的几个解决方案，加上 WebRTC，相辅相成：</p>
+<ol>
+<li>全连接网格（Full Mesh / P2P Mesh）：每个参与者都与其他所有参与者建立一个独立的 WebRTC PeerConnection。</li>
+<li>选择性转发单元（SFU - Selective Forwarding Unit）<!-- -->
+<ul>
+<li>每个参与者只与 SFU 服务器建立一个 PeerConnection。</li>
+<li>参与者将自己的音视频流发送到 SFU 服务器。</li>
+<li>SFU 服务器接收所有参与者的流，然后根据需要，选择性地将这些流转发给其他参与者，而不做任何媒体处理（如解码、混流）。</li>
+</ul>
+</li>
+<li>多点控制单元（MCU - Multipoint Control Unit）<!-- -->
+<ul>
+<li>每个参与者也只与 MCU 服务器建立一个 PeerConnection。</li>
+<li>参与者将自己的音视频流发送到 MCU 服务器。</li>
+<li>MCU 服务器会解码所有接收到的音视频流，将它们混合（Mixing）成一个或几个新的流，然后再将混合后的流发送给每个参与者。</li>
+</ul>
+</li>
+</ol>
+<p>Full Mesh 全分布式，不需要中心服务器，但仅适用于少数参与者的场景，否则节点的上下行流量都会暴增。SFU 是最流行的，中心服务器做个转发，还能适当加入控制，比如权限控制。MCU 需要较多的服务器算力，Mix 在服务器上做，适合一个固定团队或公司内，不太适合公网上规模变化较大场景。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="组织">组织<a href="https://wkevin.github.io/blog/2025/06/29/webrtc#%E7%BB%84%E7%BB%87" class="hash-link" aria-label="Direct link to 组织" title="Direct link to 组织">​</a></h2>
+<p>WebRTC 是一个开放标准，得到了多个重要组织和公司的支持与推动：</p>
+<ul>
+<li>W3C (World Wide Web Consortium): 负责定义 WebRTC 的 JavaScript API 和相关的 Web 标准。</li>
+<li>IETF (Internet Engineering Task Force): 负责定义 WebRTC 底层传输协议（如 ICE, STUN, TURN, RTP, SRTP, SCTP）的技术规范。</li>
+<li>Google: 作为 WebRTC 项目的主要发起者和贡献者，Google 在其 Chrome 浏览器中积极推广和实现了 WebRTC。</li>
+<li>Mozilla: Firefox 浏览器的开发者，也是 WebRTC 的重要支持者和实现者。</li>
+<li>Apple: Safari 浏览器的开发者，也在其浏览器中实现了 WebRTC。</li>
+<li>Microsoft: Edge 浏览器的开发者，同样支持 WebRTC。</li>
+<li>其他公司: 许多实时通信技术公司、会议服务提供商和开发者社区都积极参与 WebRTC 的发展和应用。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="开源库">开源库<a href="https://wkevin.github.io/blog/2025/06/29/webrtc#%E5%BC%80%E6%BA%90%E5%BA%93" class="hash-link" aria-label="Direct link to 开源库" title="Direct link to 开源库">​</a></h2>
+<p><strong>服务器端框架/媒体服务器</strong></p>
+<ul>
+<li>SFU (Selective Forwarding Unit) / MCU (Multipoint Control Unit) 服务器:<!-- -->
+<ul>
+<li>Janus WebRTC Server: 一个多功能的 WebRTC 服务器，采用插件式架构，支持多种用例，包括视频会议、流媒体、SIP 网关等。</li>
+<li>Jitsi Meet / Jitsi Videobridge: Jitsi 是一个非常成熟和广泛使用的开源视频会议解决方案，其核心是 Jitsi Videobridge (一个 SFU)。</li>
+<li>mediasoup: 一个高性能的 WebRTC SFU，专注于提供高质量的视频流，并支持 Simulcast 和 SVC。通常与 Node.js 或 Rust 应用程序集成。</li>
+<li>Kurento Media Server: 一个功能强大的 WebRTC 媒体服务器，提供媒体传输、处理、录制和回放功能，并支持计算机视觉等高级功能。</li>
+<li>Ant Media Server: 一个可扩展的实时流媒体服务器，支持 WebRTC、RTMP、HLS 等多种协议。</li>
+<li>LiveKit: 一个相对较新的开源实时音视频平台，提供 SFU 服务和多平台 SDK。</li>
+</ul>
+</li>
+<li>信令服务器框架</li>
+</ul>
+<p><strong>客户端 SDK/库</strong></p>
+<ul>
+<li>JavaScript 封装库:<!-- -->
+<ul>
+<li>adapter.js: 这是一个由 Google WebRTC 团队维护的 shim (垫片) 库，用于弥合不同浏览器 WebRTC 实现之间的差异，使开发者可以使用统一的 API。</li>
+<li>SimpleWebRTC: 一个流行的 JavaScript 库，提供了高层次的 API，简化了音频/视频通话、屏幕共享和文件传输的实现。</li>
+<li>PeerJS: 另一个广受欢迎的库，提供简单的 API 来设置点对点连接和数据交换，处理了信令、连接管理和数据传输的复杂性。</li>
+<li>Socket.io: 虽然不是专门的 WebRTC 库，但它是一个流行的实时 Web 框架，经常与 WebRTC 结合使用进行信令。</li>
+<li>RTCMultiConnection.js: 一个功能丰富的 WebRTC JavaScript 库，用于构建多对多应用程序（屏幕共享、音视频会议、文件共享等）。</li>
+<li>simple-peer: 一个轻量级的 WebRTC 抽象层，适用于 Node.js 和浏览器，简化了 PeerConnection 的使用。</li>
+</ul>
+</li>
+<li>移动端和桌面端 SDK:<!-- -->
+<ul>
+<li>WebRTC Native Library (Google libwebrtc): 这是 WebRTC 项目的官方 C++ 实现，通常用于构建 Android、iOS 和桌面应用程序。许多其他移动或桌面 WebRTC SDK 都是基于这个核心库构建的。</li>
+<li>React Native WebRTC: 用于在 React Native 应用中集成 WebRTC 功能。</li>
+<li>Flutter WebRTC: 用于在 Flutter 应用中集成 WebRTC 功能。</li>
+<li>Pion (Go): 一个用 Go 语言编写的 WebRTC 栈，常用于构建 WebRTC 服务器或 Go 语言的客户端应用。</li>
+<li>aiortc (Python): 基于 Python asyncio 的 WebRTC 和 ORTC 实现。</li>
+</ul>
+</li>
+</ul>]]></content:encoded>
+            <category>webrtc</category>
+        </item>
         <item>
             <title><![CDATA[速读 PocketFlow]]></title>
             <link>https://wkevin.github.io/blog/2025/03/19/pocketflow</link>
@@ -2044,31 +2156,6 @@ ViT 模型的出现和成功应用，为使用 Transformer 解决视觉领域的
 <li><a href="https://stackoverflow.com/questions/7104182/git-push-halts-on-writing-objects-100" target="_blank" rel="noopener noreferrer">Git push halts on "Writing Objects: 100%"</a></li>
 </ul>]]></content:encoded>
             <category>git</category>
-        </item>
-        <item>
-            <title><![CDATA[Vue Router 中的几个概念]]></title>
-            <link>https://wkevin.github.io/blog/2022/09/07/vue.route</link>
-            <guid>https://wkevin.github.io/blog/2022/09/07/vue.route</guid>
-            <pubDate>Wed, 07 Sep 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[vue.route]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" src="https://wkevin.github.io/assets/images/screenshot-cd04a06c36e68ca889fab45fca7f931b.png" width="2560" height="1600" class="img_ev3q"></p>
-<p><code>/user</code> 匹配到第 2 个路由上，第 2 根白线所示，因为是一级路由，与所有一级路由一样（如：<code>/</code>），都会在 App.vue 的 <code>&lt;RouterView&gt;</code> 上渲染。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="命名视图">命名视图<a href="https://wkevin.github.io/blog/2022/09/07/vue.route#%E5%91%BD%E5%90%8D%E8%A7%86%E5%9B%BE" class="hash-link" aria-label="Direct link to 命名视图" title="Direct link to 命名视图">​</a></h2>
-<p>第 2、3 根白线，发现 components 中有多个组件，就根据 <code>&lt;RouterView&gt;</code> 中的有 name 的进行渲染，所以可以达到“命名视图根据 routes 中是否定义而进行选择性渲染”的效果。</p>
-<p>这样 Header 就可以选择性出现了，选择权在 routes 的定义中。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="嵌套路由">嵌套路由<a href="https://wkevin.github.io/blog/2022/09/07/vue.route#%E5%B5%8C%E5%A5%97%E8%B7%AF%E7%94%B1" class="hash-link" aria-label="Direct link to 嵌套路由" title="Direct link to 嵌套路由">​</a></h2>
-<p><code>/user/3</code> 先匹配到 <code>/user/:id</code> 上（第 3 根白线），命名视图依然会起效，在 App.vue 的 <code>&lt;RouterView&gt;</code> 中渲染。</p>
-<p><code>/user/3/foo</code> or <code>/user/3/bar</code> 首先同上，但继续会发现 children 中的嵌套路由，继续匹配，但会在父组件中的 <code>&lt;router-view /&gt;</code> 中渲染，而不是 App.vue 中的。</p>
-<p>嵌套路由可以防止路由更新时整体网页重新渲染。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="命名路由">命名路由<a href="https://wkevin.github.io/blog/2022/09/07/vue.route#%E5%91%BD%E5%90%8D%E8%B7%AF%E7%94%B1" class="hash-link" aria-label="Direct link to 命名路由" title="Direct link to 命名路由">​</a></h2>
-<p>不要与前面的命名视图混淆了。</p>
-<p>在用 <code>&lt;RouterLink&gt;</code> 生成嵌套路由的 URL 时，可以有几种方式：</p>
-<ol>
-<li>使用相对路径，如： <code>to:"./foo"</code> —— 但这基本上很难正常工作，因为相对路径很容易变化。</li>
-<li>使用命名路由：无论是哪一级路由，都可以起个唯一性的 name，<code>&lt;RouterLink :to="{name: ...}"&gt;</code> 即可构造出目标 URL。</li>
-</ol>]]></content:encoded>
-            <category>vue</category>
-            <category>router</category>
         </item>
     </channel>
 </rss>
