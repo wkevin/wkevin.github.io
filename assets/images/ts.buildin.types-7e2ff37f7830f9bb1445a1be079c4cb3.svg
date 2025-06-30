@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="572px" preserveAspectRatio="none" style="width:1179px;height:572px;background:#FFFFFF;" version="1.1" viewBox="0 0 1179 572" width="1179px" zoomAndPan="magnify"><defs/><g><rect fill="#ADD8E6" height="132.8281" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.5;" width="106" x="10" y="218.9375"/><text fill="#000000" font-family="sans-serif" font-size="22" lengthAdjust="spacing" textLength="44" x="38" y="267.3584">内建</text><text fill="#000000" font-family="sans-serif" font-size="22" lengthAdjust="spacing" textLength="44" x="38" y="292.9678">扩展</text><text fill="#000000" font-family="sans-serif" font-size="22" lengthAdjust="spacing" textLength="50" x="38" y="318.5771">type</text><rect fill="#90EE90" height="79.2813" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.5;" width="146" x="166" y="20"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="90" x="194" y="66.5645">重置 type</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="422" x="365" y="55.3389">type Partial&lt;T&gt; = { [P in keyof T]?: T[P]; } // 将属性变成可选的</text><path d="M312,59.6406 L322,59.6406 C337,59.6406 337,50.4922 352,50.4922 L362,50.4922 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="454" x="365" y="73.6357">type Required&lt;T&gt; = { [P in keyof T]-?: T[P]; }; // 将属性变成必选的</text><path d="M312,59.6406 L322,59.6406 C337,59.6406 337,68.7891 352,68.7891 L362,68.7891 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><path d="M116,285.3516 L126,285.3516 C141,285.3516 141,59.6406 156,59.6406 L166,59.6406 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><rect fill="#90EE90" height="79.2813" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.5;" width="206" x="166" y="119.2813"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="150" x="194" y="165.8457">过滤、筛选 type</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="546" x="425" y="118.0264">type Readonly&lt;T&gt; = { readonly [P in keyof T]: T[P]; } // 筛出只读属性的 T 的子集</text><path d="M372,158.9219 L382,158.9219 C397,158.9219 397,113.1797 412,113.1797 L422,113.1797 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="577" x="425" y="136.3232">type NonNullable&lt;T&gt; = T extends null | undefined ? never : T; // 筛出非空的 T 的子集</text><path d="M372,158.9219 L382,158.9219 C397,158.9219 397,131.4766 412,131.4766 L422,131.4766 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="571" x="425" y="154.6201">type Pick&lt;T, K extends keyof T&gt; = { [P in K]: T[P]; } // 取 T 中 K 指定的部分 T 的子集</text><path d="M372,158.9219 L382,158.9219 C397,158.9219 397,149.7734 412,149.7734 L422,149.7734 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="681" x="425" y="172.917">type Exclude&lt;T, U&gt; = T extends U ? never : T; // T、U 为集合，得到 T 中排除 U 后 T 的子集（T 非集）</text><path d="M372,158.9219 L382,158.9219 C397,158.9219 397,168.0703 412,168.0703 L422,168.0703 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="510" x="425" y="191.2139">type Extract&lt;T, U&gt; = T extends U ? T : never; // T、U 为集合，取 T、U 共集</text><path d="M372,158.9219 L382,158.9219 C397,158.9219 397,186.3672 412,186.3672 L422,186.3672 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="718" x="425" y="209.5107">type Omit&lt;T, K extends keyof any&gt; = Pick&lt;T, Exclude&lt;keyof T, K&gt;&gt;; // Pick T 非集（不还是 T 非集么？）</text><path d="M372,158.9219 L382,158.9219 C397,158.9219 397,204.6641 412,204.6641 L422,204.6641 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><path d="M116,285.3516 L126,285.3516 C141,285.3516 141,158.9219 156,158.9219 L166,158.9219 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><rect fill="#90EE90" height="79.2813" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.5;" width="146" x="166" y="218.5625"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="90" x="194" y="265.127">新建 type</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="534" x="365" y="263.0498">type Record&lt;K extends keyof any, T&gt; = { [P in K]: T; } // K 作 key，T 作 value</text><path d="M312,258.2031 L322,258.2031 C337,258.2031 337,258.2031 352,258.2031 L362,258.2031 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><path d="M116,285.3516 L126,285.3516 C141,285.3516 141,258.2031 156,258.2031 L166,258.2031 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><rect fill="#90EE90" height="102.5625" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.5;" width="260" x="166" y="317.8438"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="204" x="194" y="364.4082">从函数type中提取信息</text><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="110" x="194" y="387.6895">制作新 type</text><rect fill="#FFFFFF" height="72.2969" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.5;" width="112" x="476" y="286.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="504" y="327.8232">提取入参</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="201" x="641" y="300.3779">type ThisParameterType&lt;T&gt;</text><path d="M588,322.9766 L598,322.9766 C613,322.9766 613,295.5313 628,295.5313 L638,295.5313 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="199" x="641" y="318.6748">type OmitThisParameter&lt;T&gt;</text><path d="M588,322.9766 L598,322.9766 C613,322.9766 613,313.8281 628,313.8281 L638,313.8281 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="351" x="641" y="336.9717">type Parameters&lt;T extends (...args: any) =&gt; any&gt;</text><path d="M588,322.9766 L598,322.9766 C613,322.9766 613,332.125 628,332.125 L638,332.125 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="526" x="641" y="355.2686">type ConstructorParameters&lt;T extends abstract new (...args: any) =&gt; any&gt;</text><path d="M588,322.9766 L598,322.9766 C613,322.9766 613,350.4219 628,350.4219 L638,350.4219 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><path d="M426,369.125 L436,369.125 C451,369.125 451,322.9766 466,322.9766 L476,322.9766 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><rect fill="#FFFFFF" height="72.2969" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.5;" width="126" x="476" y="379.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="504" y="420.1201">提取返回值</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="353" x="655" y="410.9717">type ReturnType&lt;T extends (...args: any) =&gt; any&gt;</text><path d="M602,415.2734 L612,415.2734 C627,415.2734 627,406.125 642,406.125 L652,406.125 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="458" x="655" y="429.2686">type InstanceType&lt;T extends abstract new (...args: any) =&gt; any&gt;</text><path d="M602,415.2734 L612,415.2734 C627,415.2734 627,424.4219 642,424.4219 L652,424.4219 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><path d="M426,369.125 L436,369.125 C451,369.125 451,415.2734 466,415.2734 L476,415.2734 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><path d="M116,285.3516 L126,285.3516 C141,285.3516 141,369.125 156,369.125 L166,369.125 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><rect fill="#90EE90" height="79.2813" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.5;" width="382" x="166" y="471.4219"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="326" x="194" y="517.9863">加工字符串字面量 type 制作新 type</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="323" x="601" y="488.4639">type Uppercase&lt;S extends string&gt; = intrinsic;</text><path d="M548,511.0625 L558,511.0625 C573,511.0625 573,483.6172 588,483.6172 L598,483.6172 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="322" x="601" y="506.7607">type Lowercase&lt;S extends string&gt; = intrinsic;</text><path d="M548,511.0625 L558,511.0625 C573,511.0625 573,501.9141 588,501.9141 L598,501.9141 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="314" x="601" y="525.0576">type Capitalize&lt;S extends string&gt; = intrinsic;</text><path d="M548,511.0625 L558,511.0625 C573,511.0625 573,520.2109 588,520.2109 L598,520.2109 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="331" x="601" y="543.3545">type Uncapitalize&lt;S extends string&gt; = intrinsic;</text><path d="M548,511.0625 L558,511.0625 C573,511.0625 573,538.5078 588,538.5078 L598,538.5078 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><path d="M116,285.3516 L126,285.3516 C141,285.3516 141,511.0625 156,511.0625 L166,511.0625 " fill="none" style="stroke:#808080;stroke-width:1.0;stroke-dasharray:1.0,1.0;"/><!--MD5=[f8a02661f15cd2a925fab9ba8c6f4fa1]
+@startmindmap
+
+' skinparam monochrome true
+<style>
+mindmapDiagram {
+  arrow {
+    LineStyle 1
+    ' LineThickness 0.5
+    LineColor gray
+  }
+  node {
+    BackgroundColor white
+    LineColor black
+    Padding 28
+  }
+  :depth(0) {
+    BackGroundColor lightblue
+    FontSize 22
+    'HorizontalAlignment center
+  }
+  :depth(1) {
+    BackGroundColor lightGreen
+    FontSize 20
+  }
+  boxless {
+    ' Margin 3
+    ' FontSize 10
+  }
+}
+</style>
+
+skinparam roundCorner 15
+
++ 内建\n扩展\ntype
+++ 重置 type
++++_ type Partial<T> = { [P in keyof T]?: T[P]; } // 将属性变成可选的
++++_ type Required<T> = { [P in keyof T]-?: T[P]; }; // 将属性变成必选的
+++ 过滤、筛选 type
++++_ type Readonly<T> = { readonly [P in keyof T]: T[P]; } // 筛出只读属性的 T 的子集
++++_ type NonNullable<T> = T extends null | undefined ? never : T; // 筛出非空的 T 的子集
++++_ type Pick<T, K extends keyof T> = { [P in K]: T[P]; } // 取 T 中 K 指定的部分 T 的子集
++++_ type Exclude<T, U> = T extends U ? never : T; // T、U 为集合，得到 T 中排除 U 后 T 的子集（T 非集）
++++_ type Extract<T, U> = T extends U ? T : never; // T、U 为集合，取 T、U 共集
++++_ type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>; // Pick T 非集（不还是 T 非集么？）
+++ 新建 type
++++_ type Record<K extends keyof any, T> = { [P in K]: T; } // K 作 key，T 作 value
+++ 从函数type中提取信息\n制作新 type
++++ 提取入参
+++++_ type ThisParameterType<T>
+++++_ type OmitThisParameter<T>
+++++_ type Parameters<T extends (...args: any) => any>
+++++_ type ConstructorParameters<T extends abstract new (...args: any) => any>
++++ 提取返回值
+++++_ type ReturnType<T extends (...args: any) => any>
+++++_ type InstanceType<T extends abstract new (...args: any) => any>
+++ 加工字符串字面量 type 制作新 type
++++_ type Uppercase<S extends string> = intrinsic;
++++_ type Lowercase<S extends string> = intrinsic;
++++_ type Capitalize<S extends string> = intrinsic;
++++_ type Uncapitalize<S extends string> = intrinsic;
+@endmindmap
+
+@startmindmap
+
+<style>
+mindmapDiagram {
+  arrow {
+    LineStyle 1
+    LineColor gray
+  }
+  node {
+    BackgroundColor white
+    LineColor black
+    Padding 28
+  }
+  :depth(0) {
+    BackGroundColor lightblue
+    FontSize 22
+  }
+  :depth(1) {
+    BackGroundColor lightGreen
+    FontSize 20
+  }
+  boxless {
+  }
+}
+</style>
+
+skinparam roundCorner 15
+
++ 内建\n扩展\ntype
+++ 重置 type
++++_ type Partial<T> = { [P in keyof T]?: T[P]; } // 将属性变成可选的
++++_ type Required<T> = { [P in keyof T]-?: T[P]; }; // 将属性变成必选的
+++ 过滤、筛选 type
++++_ type Readonly<T> = { readonly [P in keyof T]: T[P]; } // 筛出只读属性的 T 的子集
++++_ type NonNullable<T> = T extends null | undefined ? never : T; // 筛出非空的 T 的子集
++++_ type Pick<T, K extends keyof T> = { [P in K]: T[P]; } // 取 T 中 K 指定的部分 T 的子集
++++_ type Exclude<T, U> = T extends U ? never : T; // T、U 为集合，得到 T 中排除 U 后 T 的子集（T 非集）
++++_ type Extract<T, U> = T extends U ? T : never; // T、U 为集合，取 T、U 共集
++++_ type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>; // Pick T 非集（不还是 T 非集么？）
+++ 新建 type
++++_ type Record<K extends keyof any, T> = { [P in K]: T; } // K 作 key，T 作 value
+++ 从函数type中提取信息\n制作新 type
++++ 提取入参
+++++_ type ThisParameterType<T>
+++++_ type OmitThisParameter<T>
+++++_ type Parameters<T extends (...args: any) => any>
+++++_ type ConstructorParameters<T extends abstract new (...args: any) => any>
++++ 提取返回值
+++++_ type ReturnType<T extends (...args: any) => any>
+++++_ type InstanceType<T extends abstract new (...args: any) => any>
+++ 加工字符串字面量 type 制作新 type
++++_ type Uppercase<S extends string> = intrinsic;
++++_ type Lowercase<S extends string> = intrinsic;
++++_ type Capitalize<S extends string> = intrinsic;
++++_ type Uncapitalize<S extends string> = intrinsic;
+@endmindmap
+
+PlantUML version 1.2022.4(Sat Apr 09 21:29:17 CST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

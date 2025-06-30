@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="938px" preserveAspectRatio="none" style="width:825px;height:938px;background:#FFFFFF;" version="1.1" viewBox="0 0 825 938" width="825px" zoomAndPan="magnify"><defs/><g><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="301" x2="301" y1="36.2969" y2="903.0078"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="515" x2="515" y1="36.2969" y2="903.0078"/><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="270" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="277" y="24.9951">Jenkins</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="270" y="902.0078"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="277" y="922.0029">Jenkins</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="51" x="490" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="497" y="24.9951">Gitee</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="51" x="490" y="902.0078"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="497" y="922.0029">Gitee</text><path d="M156,51.2969 L156,136.2969 L296,136.2969 L296,61.2969 L286,51.2969 L156,51.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M286,51.2969 L286,61.2969 L296,61.2969 L286,51.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="78" x="162" y="68.3638">《安装插件》</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="119" x="162" y="83.4966">Manage Jenkins -&gt;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="106" x="162" y="98.6294">Install Plugins -&gt;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="113" x="162" y="113.7622">Search "Gitee" -&gt;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="37" x="162" y="128.895">Install</text><path d="M52,146.9609 L52,307.9609 L296,307.9609 L296,156.9609 L286,146.9609 L52,146.9609 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M286,146.9609 L286,156.9609 L296,156.9609 L286,146.9609 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="78" x="58" y="164.0278">《配置插件》</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="64" x="58" y="179.1606">Jenkins -&gt;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="119" x="58" y="194.2935">Manage Jenkins -&gt;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="134" x="58" y="209.4263">Configure System -&gt;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143" x="58" y="224.5591">Gitee Configuration -&gt;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="115" x="58" y="239.6919">Gitee connections</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="58" y="254.8247"> </text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="186" x="58" y="269.9575">Connection name = ((Gitee))</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="223" x="58" y="285.0903">Gitee host URL = https://gitee.com</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="134" x="58" y="300.2231">Credentials : Add --&gt;</text><path d="M520,318.2891 L520,388.2891 L810,388.2891 L810,328.2891 L800,318.2891 L520,318.2891 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M800,318.2891 L800,328.2891 L810,328.2891 L800,318.2891 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="526" y="335.356">《生成连接  token》</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="269" x="526" y="350.4888">https://gitee.com/personal_access_tokens</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="200" x="526" y="365.6216">此 token 不用于源码管理的凭据，</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="211" x="526" y="380.7544">只用于 gitee 插件的 API 调用凭据。</text><polygon fill="#181818" points="312.5,410.9531,302.5,414.9531,312.5,418.9531,308.5,414.9531" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="306.5" x2="514.5" y1="414.9531" y2="414.9531"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="318.5" y="409.8872">【连接 token】</text><path d="M47,427.9531 L47,558.9531 L296,558.9531 L296,437.9531 L286,427.9531 L47,427.9531 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M286,427.9531 L286,437.9531 L296,437.9531 L286,427.9531 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="166" x="53" y="445.02">《配置插件》--《创建连接》</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="121" x="53" y="460.1528">Domain = Global...</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146" x="53" y="475.2856">Kind = Gitee API Token</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="228" x="53" y="490.4185">Gitee APIV5 Token = 【连接 token】</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="58" x="53" y="505.5513">ID = 随意</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="53" y="520.6841">Description = 随意</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="53" y="535.8169"> </text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="207" x="53" y="550.9497">Test Connection: Success 再继续</text><path d="M5,569.0156 L5,700.0156 L297,700.0156 L297,579.0156 L287,569.0156 L5,569.0156 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M287,569.0156 L287,579.0156 L297,579.0156 L287,569.0156 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="75" x="11" y="586.0825">《配置 Job》</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="75" x="11" y="601.2153">Job -- config</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="181" x="11" y="616.3481">Gitee connection = ((Gitee))</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="11" y="631.481">Build Triggers：</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="263" x="19" y="646.6138">Build when a change is pushed to Gitee...</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143" x="27" y="661.7466">很多修改项，可参考文档</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="191" x="11" y="676.8794">找到 【webhook 地址、token】</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="174" x="11" y="692.0122">该 token 是 jenkins 中生成的</text><polygon fill="#181818" points="503.5,722.2109,513.5,726.2109,503.5,730.2109,507.5,726.2109" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="301.5" x2="509.5" y1="726.2109" y2="726.2109"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="161" x="308.5" y="721.145">【webhook 地址、token】</text><path d="M520,739.2109 L520,794.2109 L818,794.2109 L818,749.2109 L808,739.2109 L520,739.2109 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M808,739.2109 L808,749.2109 L818,749.2109 L808,739.2109 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="78" x="526" y="756.2778">《项目配置》</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="277" x="526" y="771.4106">WebHooks 管理 = 【webhook 地址、token】</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="27" x="526" y="786.5435">Test</text><polygon fill="#181818" points="312.5,816.7422,302.5,820.7422,312.5,824.7422,308.5,820.7422" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="306.5" x2="514.5" y1="820.7422" y2="820.7422"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143" x="318.5" y="815.6763">向 webhook 发送 token</text><path d="M266,833.7422 L266,858.7422 L336,858.7422 L336,843.7422 L326,833.7422 L266,833.7422 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M326,833.7422 L326,843.7422 L336,843.7422 L326,833.7422 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="272" y="850.8091">触发 Job</text><polygon fill="#181818" points="312.5,881.0078,302.5,885.0078,312.5,889.0078,308.5,885.0078" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="503.5,881.0078,513.5,885.0078,503.5,889.0078,507.5,885.0078" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="306.5" x2="509.5" y1="885.0078" y2="885.0078"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="190" x="318.5" y="879.9419">使用【连接 token】git pull 源码</text><!--MD5=[0f7947f61868832d6c9ff6bfd547abdd]
+@startuml
+' skinparam monochrome true
+<style>
+mindmapDiagram {
+  arrow {
+    LineStyle 1
+    ' LineThickness 0.5
+    LineColor gray
+  }
+  node {
+    BackgroundColor white
+    LineColor black
+    Padding 28
+  }
+  :depth(0) {
+    BackGroundColor lightblue
+    FontSize 22
+    'HorizontalAlignment center
+  }
+  :depth(1) {
+    BackGroundColor lightGreen
+    FontSize 20
+  }
+  boxless {
+    ' Margin 3
+    ' FontSize 10
+  }
+}
+</style>
+
+participant Jenkins as J
+participant Gitee as G
+
+note left J
+《安装插件》
+Manage Jenkins ->
+Install Plugins ->
+Search "Gitee" ->
+Install
+end note
+
+note left J
+《配置插件》
+Jenkins ->
+Manage Jenkins ->
+Configure System ->
+Gitee Configuration ->
+Gitee connections
+
+Connection name = ((Gitee))
+Gitee host URL = https://gitee.com
+Credentials : Add - ->
+end note
+
+note right G
+《生成连接  token》
+https://gitee.com/personal_access_tokens
+此 token 不用于源码管理的凭据，
+只用于 gitee 插件的 API 调用凭据。
+end note
+
+G -> J: 【连接 token】
+
+note left J
+《配置插件》- -《创建连接》
+Domain = Global...
+Kind = Gitee API Token
+Gitee APIV5 Token = 【连接 token】
+ID = 随意
+Description = 随意
+
+Test Connection: Success 再继续
+end note
+
+note left J
+《配置 Job》
+Job - - config
+Gitee connection = ((Gitee))
+Build Triggers：
+  Build when a change is pushed to Gitee...
+    很多修改项，可参考文档
+找到 【webhook 地址、token】
+该 token 是 jenkins 中生成的
+end note
+
+J -> G: 【webhook 地址、token】
+
+note right G
+《项目配置》
+WebHooks 管理 = 【webhook 地址、token】
+Test
+end note
+
+G -> J: 向 webhook 发送 token
+
+note over J: 触发 Job
+
+J <-> G: 使用【连接 token】git pull 源码
+@enduml
+
+@startuml
+<style>
+mindmapDiagram {
+  arrow {
+    LineStyle 1
+    LineColor gray
+  }
+  node {
+    BackgroundColor white
+    LineColor black
+    Padding 28
+  }
+  :depth(0) {
+    BackGroundColor lightblue
+    FontSize 22
+  }
+  :depth(1) {
+    BackGroundColor lightGreen
+    FontSize 20
+  }
+  boxless {
+  }
+}
+</style>
+
+participant Jenkins as J
+participant Gitee as G
+
+note left J
+《安装插件》
+Manage Jenkins ->
+Install Plugins ->
+Search "Gitee" ->
+Install
+end note
+
+note left J
+《配置插件》
+Jenkins ->
+Manage Jenkins ->
+Configure System ->
+Gitee Configuration ->
+Gitee connections
+
+Connection name = ((Gitee))
+Gitee host URL = https://gitee.com
+Credentials : Add - ->
+end note
+
+note right G
+《生成连接  token》
+https://gitee.com/personal_access_tokens
+此 token 不用于源码管理的凭据，
+只用于 gitee 插件的 API 调用凭据。
+end note
+
+G -> J: 【连接 token】
+
+note left J
+《配置插件》- -《创建连接》
+Domain = Global...
+Kind = Gitee API Token
+Gitee APIV5 Token = 【连接 token】
+ID = 随意
+Description = 随意
+
+Test Connection: Success 再继续
+end note
+
+note left J
+《配置 Job》
+Job - - config
+Gitee connection = ((Gitee))
+Build Triggers：
+  Build when a change is pushed to Gitee...
+    很多修改项，可参考文档
+找到 【webhook 地址、token】
+该 token 是 jenkins 中生成的
+end note
+
+J -> G: 【webhook 地址、token】
+
+note right G
+《项目配置》
+WebHooks 管理 = 【webhook 地址、token】
+Test
+end note
+
+G -> J: 向 webhook 发送 token
+
+note over J: 触发 Job
+
+J <-> G: 使用【连接 token】git pull 源码
+@enduml
+
+PlantUML version 1.2022.4(Sat Apr 09 21:29:17 CST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
