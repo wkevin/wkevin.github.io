@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[59423],{21542:s=>{s.exports=JSON.parse('{"label":"PyCharm","permalink":"/blog/tags/py-charm","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

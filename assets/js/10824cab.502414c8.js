@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[36756],{63328:s=>{s.exports=JSON.parse('{"label":"gitee","permalink":"/blog/tags/gitee","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

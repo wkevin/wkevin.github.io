@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[35960],{23180:s=>{s.exports=JSON.parse('{"label":"framework","permalink":"/blog/tags/framework","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[81825],{15517:s=>{s.exports=JSON.parse('{"label":"sublime","permalink":"/blog/tags/sublime","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[59237],{65167:s=>{s.exports=JSON.parse('{"label":"Kanban","permalink":"/blog/tags/kanban","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

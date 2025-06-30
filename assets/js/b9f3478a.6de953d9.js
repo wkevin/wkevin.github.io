@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[19143],{35703:s=>{s.exports=JSON.parse('{"label":"Scrum","permalink":"/blog/tags/scrum","allTagsPath":"/blog/tags","count":3,"unlisted":false}')}}]);

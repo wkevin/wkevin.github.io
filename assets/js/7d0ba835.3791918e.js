@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[86251],{93667:s=>{s.exports=JSON.parse('{"label":"simpy","permalink":"/blog/tags/simpy","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

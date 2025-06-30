@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[4367],{69528:s=>{s.exports=JSON.parse('{"label":"word-wrap","permalink":"/blog/tags/word-wrap","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

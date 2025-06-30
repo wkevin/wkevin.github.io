@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_site=self.webpackChunkdocusaurus_site||[]).push([[38947],{56600:e=>{e.exports=JSON.parse('{"authors":[{"name":"wKevin","title":"\u4e00\u9897\u5411\u4e0a\u7684\u6c34\u6ef4","url":"http://weibo.com/wkevin27","imageURL":"/img/avastar/angry.bird-l.jpg","key":"wKevin","page":null,"count":97}]}')}}]);
